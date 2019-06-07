@@ -15,26 +15,7 @@
 <div id="wrapper">
 	<header id="header">
 	<div class="logo">
-
-    <div id="musical">
-    <font size="8" onClick="myFun();" id="musicImg">夜</font>
-    <audio id="music" src="/img/yy/1.mp3"></audio>
-</div>
-<script>
-var flag =true;
-function myFun() {
-    var audio = document.getElementById('music');
-    if (!flag) {
-        audio.pause();
-        document.getElementById('musicImg').src = "/img/yyk.png";
-        flag = true;
-    } else {
-        audio.play();
-        document.getElementById('musicImg').src = "/img/yyg.png";
-        flag = false;
-    }}
-</script>
-
+<span class="icon fa-diamond"><font size="8">夜</font></span>
 </div>
 </div>
 	<div class="content">
