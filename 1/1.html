@@ -1,0 +1,147 @@
+<html>
+<META HTTP-EQUIV="Content-Type" content="text/html; charset=gb_2312-80">
+<TITLE>WinWebMail</TITLE>
+<LINK href="images\hwem.css" rel=stylesheet>
+<script language="JavaScript">
+function doZoom(size){
+    document.getElementById('zoom').style.fontSize=size+'px'
+  }
+  var DOM = (document.getElementById) ? 1 : 0;
+  var NS4 = (document.layers) ? 1 : 0;
+  var IE4 = 0;
+  if (document.all)
+  {
+    IE4 = 1;
+    DOM = 0;
+  }
+  var win = window; 
+  var n = 0;
+  function findIt() {
+      if (document.getElementById("searchstr").value != "")
+      findInPage(document.getElementById("searchstr").value);
+    }
+    function findInPage(str) {
+        var txt, i, found;
+        if (str == "")
+        return false;
+        if (DOM)
+        {
+          win.find(str, false, true);
+          return true;
+        }
+        if (NS4) {
+          if (!win.find(str))
+          while(win.find(str, false, true))
+          n++;
+        else
+          n++;
+          if (n == 0)
+          alert("未找到指定内容.");
+        }
+        if (IE4) {
+          txt = win.document.body.createTextRange();
+
+          for (i = 0; i <= n && (found = txt.findText(str)) != false; i++) {
+            txt.moveStart("character", 1);
+            txt.moveEnd("textedit");
+          }
+          if (found) {
+            txt.moveStart("character", -1);
+            txt.findText(str);
+            txt.select();
+            txt.scrollIntoView();
+            n++;
+          }
+        else {
+            if (n > 0) {
+              n = 0;
+              findInPage(str);
+            }
+          else
+            alert("未找到指定内容.");
+          }
+        }
+        return false;
+      }
+      </script>
+
+      <BODY>
+      <br>
+      <div align="center">
+      <table width="90%" border="0" align="center" cellspacing="0" bgcolor="#EFF7FF" style='border:1px #8CA5B5 solid;' id="zoom">
+      <tr bgcolor="#DBEAF5"> 
+      <td height="50" style='border-bottom:1px #8CA5B5 solid;'>
+      <center><font class="s" color="#104A7B"><b>帮助</b></center>
+      <div align="center">
+      <table width="98%"><tr><td align="left">
+      查看:[<a href="javascript:doZoom(30)">大字</a> <a href="javascript:doZoom(20)">中字</a> <a href="javascript:doZoom(15)">小字</a>]</font>
+      </td><td align="right">
+      <input type="text" id="searchstr" name="searchstr" class="textbox" size="10" style="width:300px;height:50px">
+      <input type="button" value="页内查找" onclick="javascript:findIt();" class="sbttn" style="width:90px;height:50px">
+      </td></tr></table>
+      </div>
+      </td>
+      </tr>
+      <tr>
+      <td>
+      <br>
+      <center><font color="#FF3333">NT-T2612L</font></center>
+      <br>
+      <br>
+      <center>
+      <p>HP(惠普)：1010/1012/1015/1020plus/1022/1018/3015/3020/3030/3050/3052/3038/3052/3055/M1005/MFP/M1319f</p>
+      <p>Canon(佳能)：BP-2900 3000/FAX-MF4680/MF4010/MF4012/IC MF4010B/MF4012B/MF4012G/MF4120/MF4122/MF4150/MF4270</p>
+      </center>
+      <br>
+      <br>
+      </td>
+      </tr>
+      <tr>
+      <td>
+      <br>
+      <center><a name="writemail"></a><font color="#FF3333">NT-T1610L</font></center>
+      <br>
+      <br>
+      <center>
+      <p>XEROX(富士施乐)：3117/3124/EP220</p>
+      <p>DELL LASER PRINTER(戴尔激光打印机)：1100</p>
+      <p>SAMSUNG(三星)：ML-1610/2010/2510/SCX-4521F/4321</p>
+      </center>
+      <br>
+      <br>
+      </td>
+      </tr>
+      <tr>
+      <td>
+      <br>
+      <center><font color="#FF3333">NT-T0388L/T0436L</font></center>
+      <br>
+      <br>
+      <center>
+      <p>HP(惠普)：Laserjet P1007/P1008/P1505/P1505N/M1120/M1522N/M1522NF/P1606/P1560/P1566/M1536MFP</p>
+      <nobr>Canon(佳能)：LBP-3250/LBP6200D 3018/3108/3050/3100/3150/3010/IC MF4570/MF4550/NF4450/MF4412/MF4452/MF4410N/IC D520</nobr>
+      </center>
+      <br>
+      <br>
+      </td>
+      </tr>
+      <tr>
+      <td>
+      <br>
+      <center><a name="writemail"></a><font color="#FF3333">NT-TB012L</font></center>
+      <br>
+      <br>
+      <center>
+      <p><nobr>Brother(兄弟)：TN-225/TN-350/TN-2050/TN-430/6300/TN-460/6600/TN-3065/TN-3035/TN-3175/TN-2115/TN-2215/TN-2225/TN-2015</nobr></p>
+      <p>Lenovo(联想)：LT201/LJ2020/LT2822/LT2922/LT4636/LT2441/LT2641</p>
+      </center>
+      <br>
+      <br>
+      </td>
+      </tr>
+      </table>
+      </div>
+      <br>
+      <br>
+      </BODY>
+      </html>
