@@ -1,0 +1,109 @@
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+<style>body{TEXT-ALIGN: center;}#center{line-height:60px;}</style>
+
+<style type="text/css">a{ text-decoration:none;}a:hover{ text-decoration:none}</style>
+
+<style>body {background:url(https://api.weikan.club/sjbz/api.php?method=pc&lx=fengjing);background-size:100%;background-repeat: no-repeat;background-attachment:fixed}</style>
+
+<body ><div id="center"><p>
+
+<title>驱动查找</title>
+
+<h3 class="am-panel-title am-text-lg"><span style="color:#FF0000">驱动查找</span></h3>
+
+<script type="text/javascript">
+#alert("公告：")
+</script>
+
+<link href="/css/sou.css" rel="stylesheet" />
+<div id="main">
+<div class="content">
+<div class="pure-form">	
+<select id='sel'></select>
+<br><br>
+<p><center><input type="text" id="url" placeholder="在这里输入型号！" style="border-radius:2px"></center></p>
+<br>
+<select id='open'>
+<option value='0'>新窗口打开</option>
+<option value='1'>本窗口打开</option>
+</select>
+<button class="pure-button pure-button-primary" onclick="play();">开始搜索</button>
+</div>
+</div>
+<script>
+var data = [
+
+{name:"聚合搜索(第三方)",url:"http://www.dyjqd.com/plus/search.php?q="},
+
+{name:"惠普(官网)",url:"https://support.hp.com/cn-zh/drivers/selfservice/identify?q="},
+
+{name:"爱普生(官网)",url:"http://www.epson.com.cn/Apps/search/index.aspx?key="},
+
+		];
+	for (var i in  data)
+	{
+		var opt = document.createElement ("option");
+		opt.value = data[i].url;
+		opt.innerText = data[i].name;
+		document.getElementById('sel').appendChild (opt);
+	}
+	
+	function play(){
+		var url = document.getElementById("url").value;
+		if(url.indexOf('') == -1)
+		{	
+			alert('输入内容为空！');return;
+		}
+		var api = document.getElementById("sel").value;
+		var open = document.getElementById("open").value;
+		url = api + url;
+		switch(open)
+		{
+			case '0':
+				window.open(url);
+				console.log(0);
+				break;
+			case '1':
+				window.location = url;
+				console.log(1);
+				break;
+		}
+	}
+	</script>
+
+<br>
+
+<a href="javascript:void(0);" class="pure-button pure-button-primary" onclick="javascript:document.getElementsByTagName('BODY')[0].scrollTop=document.getElementsByTagName('BODY')[0].scrollHeight;">进入更多</a>
+
+<div style="height:250px;"></div>
+
+<h3 class="am-panel-title am-text-lg"><span style="color:#FF0000">打印机官网</span></h3>
+
+<br>
+
+<a href="https://support.hp.com/cn-zh/drivers/printers" class="pure-button pure-button-primary">惠普官网</a>
+
+<a href="http://www.95105369.com/Web/Index.aspx" class="pure-button pure-button-primary">兄弟官网</a>
+
+<a href="http://www.epson.com.cn/Apps/tech_support/GuideDrive.aspx?columnid=384&sort-1=376&product-2=378" class="pure-button pure-button-primary">爱普生官网</a>
+
+<a href="https://www.konicaminolta.com.cn/business/support/drivers/" class="pure-button pure-button-primary">柯尼卡美能达</a>
+
+<a href="https://www.jolimark.com/service/down.php" class="pure-button pure-button-primary">映美官网</a>
+
+<a href="https://newsupport.lenovo.com.cn/printeranddigital.html?v=12b8695676abf1242ab53775db377b0d" class="pure-button pure-button-primary">联想官网</a>
+
+<div style="height:200px;"></div>
+
+<p>
+<a href="javascript:void(0);" class="pure-button pure-button-primary" onclick="javascript:document.getElementsByTagName('BODY')[0].scrollTop=0;">返回顶部</a>
+</p>
+<br>
+
+</div>
+</body>
+</meta>
+</meta>
