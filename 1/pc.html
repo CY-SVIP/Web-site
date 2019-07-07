@@ -1,0 +1,127 @@
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+<style>body{TEXT-ALIGN: center;}#center{line-height:60px;}</style>
+
+<style type="text/css">a{ text-decoration:none;}a:hover{ text-decoration:none}</style>
+
+<style>body {background:url(https://api.weikan.club/sjbz/api.php?method=pc&lx=fengjing);background-size:100%;background-repeat: no-repeat;background-attachment:fixed}</style>
+
+<body ><div id="center"><p>
+
+<title>ROM查找</title>
+
+<h3 class="am-panel-title am-text-lg"><span style="color:#FF0000">ROM查找</span></h3>
+
+<script type="text/javascript">
+#alert("公告：")
+</script>
+
+<link href="/css/sou.css" rel="stylesheet" />
+<div id="main">
+<div class="content">
+<div class="pure-form">	
+<select id='sel'></select>
+<br><br>
+<p><center><input type="text" id="url" placeholder="在这里输入型号！" style="border-radius:2px"></center></p>
+<br>
+<select id='open'>
+<option value='0'>新窗口打开</option>
+<option value='1'>本窗口打开</option>
+</select>
+<button class="pure-button pure-button-primary" onclick="play();">开始搜索</button>
+</div>
+</div>
+<script>
+var data = [
+
+{name:"ROM之家",url:"http://so.romzhijia.net/cse/search?s=12725138872909822094&q="},
+
+{name:"刷机天堂",url:"http://shuajitt.com/plus/search.php?kwtype=0&q="},
+
+{name:"华为刷机网",url:"https://m.huaweirom.com/hua/search.html?kwtype=0&q="},
+
+{name:"ROM云盘①",url:"http://url88.cn/u/2VPR1?keyword="},
+
+{name:"ROM云盘②",url:"http://url88.cn/u/C6oeu?keyword="},
+
+{name:"ROM云盘③",url:"http://url88.cn/u/ByQXz?keyword="},
+
+{name:"ROM云盘④",url:"http://url88.cn/u/BYNiQ?keyword="},
+
+		];
+	for (var i in  data)
+	{
+		var opt = document.createElement ("option");
+		opt.value = data[i].url;
+		opt.innerText = data[i].name;
+		document.getElementById('sel').appendChild (opt);
+	}
+	
+	function play(){
+		var url = document.getElementById("url").value;
+		if(url.indexOf('') == -1)
+		{	
+			alert('输入内容为空！');return;
+		}
+		var api = document.getElementById("sel").value;
+		var open = document.getElementById("open").value;
+		url = api + url;
+		switch(open)
+		{
+			case '0':
+				window.open(url);
+				console.log(0);
+				break;
+			case '1':
+				window.location = url;
+				console.log(1);
+				break;
+		}
+	}
+	</script>
+
+<br>
+
+<a href="javascript:void(0);" class="pure-button pure-button-primary" onclick="javascript:document.getElementsByTagName('BODY')[0].scrollTop=document.getElementsByTagName('BODY')[0].scrollHeight;">进入更多</a>
+
+<div style="height:250px;"></div>
+
+<h3 class="am-panel-title am-text-lg"><span style="color:#FF0000">各种ROM网站</span></h3>
+
+<br>
+
+<a href="https://www.cnroms.com/" class="pure-button pure-button-primary">ROM中国</a>
+
+<a href="http://m.shuajibao.com/rom" class="pure-button pure-button-primary">线刷宝</a>
+
+<a href="https://www.romzhijia.net/" class="pure-button pure-button-primary">ROM之家</a>
+
+<a href="http://rom.7to.cn/" class="pure-button pure-button-primary">奇兔ROM</a>
+
+<a href="https://download.mokeedev.com/" class="pure-button pure-button-primary">魔趣ROM</a>
+
+<a href="http://shuajitt.com/" class="pure-button pure-button-primary">刷机天堂</a>
+
+<a href="https://cn.club.vmall.com/forum.html" class="pure-button pure-button-primary">花粉俱乐部</a>
+
+<a href="http://www.miui.com/download.html" class="pure-button pure-button-primary">小米官网</a>
+
+<a href="http://www.miui.com/forum.php?mobile=2" class="pure-button pure-button-primary">小米论坛</a>
+
+<a href="http://url88.cc:66/s/" class="pure-button pure-button-primary">线刷救砖ROM</a>
+
+<a href="https://m.huaweirom.com" class="pure-button pure-button-primary">华为刷机网</a>
+
+
+<div style="height:200px;"></div>
+
+<p>
+<a href="javascript:void(0);" class="pure-button pure-button-primary" onclick="javascript:document.getElementsByTagName('BODY')[0].scrollTop=0;">返回顶部</a>
+</p>
+<br>
+</div>
+</body>
+</meta>
+</meta>
