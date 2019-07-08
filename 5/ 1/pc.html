@@ -1,0 +1,98 @@
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+<style>body{TEXT-ALIGN: center;}#center{line-height:80px;}</style>
+
+<style>body {background:url(https://api.weikan.club/sjbz/api.php?method=pc&lx=fengjing);background-size:100%;background-repeat: no-repeat;background-attachment:fixed}</style>
+
+<body ><div id="center"><p>
+
+<title>无名〆小站</title>
+
+<h3 class="am-panel-title am-text-lg"><span style="color:#FF0000">各大视频平台搜索</span></h3>
+
+<script type="text/javascript">
+alert("公告：有的平台的视频解析不了，解析失败可尝试换个接口，实在不行就用“影视搜索”搜。")
+</script>
+
+
+<link href="/css/sou.css" rel="stylesheet" />
+<div id="main">
+<div class="content">
+<div class="pure-form">	
+<select id='sel'></select>
+<br><p><center><input type="text" id="url" placeholder="请输入关键字！" style="border-radius:2px"></center></p>
+<p><select id='open'></p>
+<option value='0'>新窗口打开</option>
+<option value='1'>本窗口打开</option>
+</select>
+<br><p><button class="pure-button pure-button-primary" onclick="play();">点我搜索</button></p>
+</div>
+</div>
+<script>
+var data = [
+
+        {name:"爱奇艺",url:"http://m.iqiyi.com/search.html?source=input&vfrm=2-3-0-1&key="},
+        
+        {name:"腾讯视频",url:"http://m.v.qq.com/search.html?act=0&keyWord="},
+        
+        {name:"优酷/土豆",url:"http://www.soku.com/m/y/video?q="},
+        
+        {name:"乐视视频",url:"http://m.le.com/search?wd="},
+        
+        {name:"搜狐视频",url:"https://m.tv.sohu.com/upload/h5/m/mso.html?key="},
+        
+        {name:"芒果TV",url:"https://m.mgtv.com/so/?k="},
+        
+        {name:"PPTV",url:"http://m.pptv.com/s_video/pg_result?keyword="},
+         
+        {name:"56视频",url:"http://m.56.com/so.html?key="},
+        
+        {name:"1905电影网",url:"http://vip.1905.com/Search?q="},
+        
+
+		];
+	for (var i in  data)
+	{
+		var opt = document.createElement ("option");
+		opt.value = data[i].url;
+		opt.innerText = data[i].name;
+		document.getElementById('sel').appendChild (opt);
+	}
+	
+	function play(){
+		var url = document.getElementById("url").value;
+		if(url.indexOf('') == -1)
+		{	
+			alert('输入内容为空！');return;
+		}
+		var api = document.getElementById("sel").value;
+		var open = document.getElementById("open").value;
+		url = api + url;
+		switch(open)
+		{
+			case '0':
+				window.open(url);
+				console.log(0);
+				break;
+			case '1':
+				window.location = url;
+				console.log(1);
+				break;
+		}
+	}
+	</script>
+	
+
+
+<style type="text/css">a{ text-decoration:none;}a:hover{ text-decoration:none}</style>
+
+<a href="#" class="pure-button pure-button-primary" onclick="javascript:history.back(-1);">返回上页</a>
+<a href="/" class="pure-button pure-button-primary">返回主页</a>
+
+</p>
+</div>
+</body>
+</meta>
+</meta>
