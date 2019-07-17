@@ -1,0 +1,108 @@
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+<style>body{TEXT-ALIGN: center;}#center{line-height:80px;}</style>
+
+<style>body {background:url(https://api.weikan.club/sjbz/api.php?method=mobile&lx=fengjing);background-size:100%;background-repeat: no-repeat;background-attachment:fixed}</style>
+
+<body ><div id="center"><p>
+
+<title>无名〆小站</title>
+
+<h3 class="am-panel-title am-text-lg"><span style="color:#33CCFF">搜索引擎集合</span></h3>
+
+<link href="/css/sou.css" rel="stylesheet" />
+<div id="main">
+<div class="content">
+<div class="pure-form">	
+<select id='sel'></select>
+<br><p><center><input type="text" id="url" placeholder="请输入关键字！" style="border-radius:2px"></center></p>
+<p><select id='open'></p>
+<option value='0'>新窗口打开</option>
+<option value='1'>本窗口打开</option>
+</select>
+<button class="pure-button pure-button-primary" onclick="play();">点我搜索</button>
+</div>
+</div>
+<script>
+var data = [
+
+       	{name:"百度",url:"https://m.baidu.com/s?word="},
+       	
+       	{name:"360",url:"https://m.so.com/s?q="},
+
+       	{name:"搜狗",url:"https://m.sogou.com/web/searchList.jsp?uID=lbGXaEGKng7pcDzi&v=5&from=index&w=1274&t=1519818391162&s_t=1519818398566&s_from=index&keyword="},
+       	
+       	{name:"神马",url:"http://m.sm.cn/s?q="},
+       	       	
+       	{name:"微软",url:"http://cn.bing.com/search?q="},
+       	
+       	{name:"谷歌(需翻墙)",url:"https://www.google.fr/search?dcr=0&ei=ZpmWWpeaGcn7UqaJuqgM&q="},
+
+       	{name:"百度知道",url:"https://zhidao.baidu.com/index/?fr=&word="},
+
+       	{name:"CSDN技术社区",url:"https://so.csdn.net/so/search/s.do?q="},
+       	       	
+       	{name:"微博",url:"https://m.weibo.cn/p/100103type%3D1%26q%3D"},
+
+        {name:"淘宝",url:"https://s.m.taobao.com/h5?q="},
+        
+       	{name:"京东商城",url:"https://so.m.jd.com/ware/search.action?keyword="},
+
+       	{name:"苏宁易购(关键字后要加个斜杆)",url:"https://m.suning.com/search/"},
+
+       	{name:"百度成语接龙",url:"http://hanyu.baidu.com/zici/jielong?wd="},
+                
+        {name:"百度云资源",url:"http://m.panduoduo.net/s/name/"},
+
+       	{name:"搜BT磁力搜索",url:"http://www.zhongziba.org/search?wd="},
+       	
+       	{name:"央视",url:"https://search.cctv.com/m/search.php?type=web&qtext="},
+
+       	
+       	
+
+		];
+	for (var i in  data)
+	{
+		var opt = document.createElement ("option");
+		opt.value = data[i].url;
+		opt.innerText = data[i].name;
+		document.getElementById('sel').appendChild (opt);
+	}
+	
+	function play(){
+		var url = document.getElementById("url").value;
+		if(url.indexOf('') == -1)
+		{	
+			alert('输入内容为空！');return;
+		}
+		var api = document.getElementById("sel").value;
+		var open = document.getElementById("open").value;
+		url = api + url;
+		switch(open)
+		{
+			case '0':
+				window.open(url);
+				console.log(0);
+				break;
+			case '1':
+				window.location = url;
+				console.log(1);
+				break;
+		}
+	}
+	</script>
+
+
+<style type="text/css">a{ text-decoration:none;}a:hover{ text-decoration:none}</style>
+
+<a href="#" class="pure-button pure-button-primary" onclick="javascript:history.back(-1);">返回上页</a>
+<a href="/sE9N8Qh6wH9A46ND9.html" class="pure-button pure-button-primary">返回主页</a>
+
+</p>
+</div>
+</body>
+</meta>
+</meta>
