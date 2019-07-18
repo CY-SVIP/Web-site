@@ -24,13 +24,13 @@
 <div class="pure-form">	
 <select id='sel'></select>
 <br><br>
-<p><center><input type="text" id="url" placeholder="在这里输入型号！" style="border-radius:2px"></center></p>
+<p><center><input type="text" id="url" onkeydown="keyDown(event)" placeholder="在这里输入型号！" style="border-radius:2px"></center></p>
 <br>
 <select id='open'>
 <option value='0'>新窗口打开</option>
 <option value='1'>本窗口打开</option>
 </select>
-<button class="pure-button pure-button-primary" onclick="play();">开始搜索</button>
+<button class="pure-button pure-button-primary" id="play" onclick="play();">开始搜索</button>
 </div>
 </div>
 <script>
@@ -81,6 +81,31 @@ var data = [
 		}
 	}
 	</script>
+ 
+ <script>
+function keyDown(e){
+  var keycode = 0; 
+  if(CheckBrowserIsIE()){ 
+      keycode = event.keyCode; 
+  }else{ 
+      keycode = e.which; 
+  } 
+  if (keycode == 13 ) 
+  { 
+   var obtnLogin = document.getElementById("play");
+                obtnLogin.focus();
+  } 
+}
+function CheckBrowserIsIE(evt){
+    var result = false; 
+    var browser = navigator.appName; 
+    if(browser == "Microsoft Internet Explorer"){ 
+        result = true; 
+    } 
+    return result;           
+}
+</script>
+
 
 <br>
 
