@@ -1,14 +1,14 @@
-<script>
-
-document.οnkeydοwn=function(event) 
-{ 
-e = event ? event :(window.event ? window.event : null); 
-if(e.keyCode==13){ 
-//执行的方法 
-alert('回车检测到了'); 
-search();
-return false;
-} 
-} 
-
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+<title>Check Score</title>
+<script language="JavaScript">
+function keyLogin(){
+ if (event.keyCode==13)  //回车键的键值为13
+   document.getElementByIdx_x("input1").click(); //调用登录按钮的登录事件
+}
 </script>
+</head>
+<body οnkeydοwn="keyLogin();">
+<input id="input1" value="登录" type="button" onClick="alert('调用成功！')">
+</body>
+</html>
