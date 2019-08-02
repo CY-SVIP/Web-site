@@ -1,0 +1,304 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>无名〆小站</title>
+<meta charset="utf-8">
+<meta name="baidu-site-verification" content="b9lOcChmbf">
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+<link rel="shortcut icon" href="./favicon.ico" />
+<link rel="stylesheet" href="./css/main.css">
+<noscript>
+<link rel="stylesheet" href="./css/noscript.css"/>
+</noscript>
+</head>
+<body>
+<div id="wrapper">
+<header id="header">
+<div class="logo">
+
+<div id="musical">
+<font size="8" onClick="myFun();" id="musicImg">夜</font>
+<audio id="music" src="https://www.lori.tw/music.php"></audio>
+</div>
+<script>
+var flag =true;
+function myFun() {
+    var audio = document.getElementById('music');
+    if (!flag) {
+      audio.pause();
+      document.getElementById('musicImg').src = "/img/yyk.png";
+      flag = true;
+    } else {
+      audio.play();
+      document.getElementById('musicImg').src = "/img/yyg.png";
+      flag = false;
+    }}
+  </script>
+
+  </div>
+  <div class="content">
+  <div class="inner">
+
+  <h1 class="am-panel-title am-text-lg"><span style="color:#CC00FF">
+  <script>
+  var message="M.Z666.TK"
+  var neonbasecolor="#FFFF00"
+  var neontextcolor="#FF0000"
+  var neontextcolor2="#00FF00"
+  var flashspeed=200
+  var flashingletters=2
+  var flashingletters2=2
+  var flashpause=0 
+  var n=0
+  if (document.all||document.getElementById){
+    document.write('<font color="'+neonbasecolor+'">')
+    for (m=0;m<message.length;m++)
+    document.write('<span id="neonlight'+m+'">'+message.charAt(m)+'</span>')
+    document.write('</font>')
+  }
+else
+  document.write(message)
+  function crossref(number){
+      var crossobj=document.all? eval("document.all.neonlight"+number) : document.getElementById("neonlight"+number)
+      return crossobj
+    }
+    function neon(){
+        if (n==0){
+          for (m=0;m<message.length;m++)
+          crossref(m).style.color=neonbasecolor
+        }
+        crossref(n).style.color=neontextcolor
+        if (n>flashingletters-1) crossref(n-flashingletters).style.color=neontextcolor2 
+        if (n>(flashingletters+flashingletters2)-1) crossref(n-flashingletters-flashingletters2).style.color=neonbasecolor
+        if (n<message.length-1)
+        n++
+      else{
+          n=0
+          clearInterval(flashing)
+          setTimeout("beginneon()",flashpause)
+          return
+        }
+      }
+      function beginneon(){
+          if (document.all||document.getElementById)
+          flashing=setInterval("neon()",flashspeed)}
+        beginneon()
+        </script></span></h1>
+
+        <h5 class="am-panel-title am-text-lg"><span style="color:#66FF66"><script type="text/javascript">var today = new Date();var date = today.getDate();var day = today.getDay();var month = today.getMonth()+1;var year = today.getFullYear();var hour=today.getHours();var morning="";var week="";if (day==0) week='星期日';if (day==1) week='星期一';if (day==2) week='星期二';if (day==3) week='星期三';if (day==4) week='星期四';if (day==5) week='星期五';if (day==6) week='星期六';document.write(year+"年"+month+"月"+date+"日 "+week+" "+morning);</script></span></h5>
+
+        </div>
+        </div>
+        <nav>
+        <ul>
+        <li><a href="#a">快捷搜索</a></li>
+        <li><a href="#b">驱动天空</a></li>
+        <li><a href="#c">映美搜索</a></li>
+        <li><a href="#d">等待开发</a></li>
+        <meta name="baidu-site-verification" content="DBlFfMx0jq" />
+        </ul>
+        </nav>
+        </header>
+
+        <footer id="footer">
+        <p class="copyright">©2019 无名〆小站 <a href="https://github.com/CY-SVIP">Git</a></p>
+        </footer>
+
+        <div id="main"> 
+        <article id="a">
+        <center><h2 class="major">驱动搜索</h2></center>
+        <div id="main">
+        <div class="content">
+        <div class="pure-form"> 
+        <select id='sel'></select>
+        <br>
+        <p><center><input type="text" id="url" onkeydown="keyDown(event)" placeholder="在这里输入型号！" style="border-radius:2px"></center></p>
+        <br>
+        <select id='open'>
+        <option value='0'>新窗口打开</option>
+        <option value='1'>本窗口打开</option>
+        </select>
+        <p><center><button id="play" onclick="play();">开始搜索</button></center></p>
+        </div>
+        </div>
+        <script>
+        var data = [
+
+        {name:"请选择搜索接口"},
+
+        {name:"打印机驱动网(第三方)",url:"http://www.dyjqd.com/plus/search.php?q="},
+
+        {name:"惠普(官网)",url:"https://support.hp.com/cn-zh/drivers/selfservice/identify?q="},
+
+        {name:"爱普生(官网)",url:"http://www.epson.com.cn/Apps/search/index.aspx?key="},
+
+        {name:"驱动人生(第三方)",url:"http://drivers.160.com/index.php?m=drivers&c=searchres&a=index&search="},
+
+        {name:"驱动之家(第三方)",url:"http://so.mydrivers.com/drivers.aspx?tn=98012088_dg&ch=1&s_class=1&q="},
+
+
+        ];
+        for (var i in data)
+        {
+          var opt = document.createElement ("option");
+          opt.value = data[i].url;
+          opt.innerText = data[i].name;
+          document.getElementById('sel').appendChild (opt);
+        }
+
+        function play(){
+            var url = document.getElementById("url").value;
+            { 
+              if ( document.getElementById("url").value=="") 
+              {
+                alert('请选择接口并输入型号!'); 
+                return false;
+              }
+            }
+            var api = document.getElementById("sel").value;
+            var open = document.getElementById("open").value;
+            url = api + url;
+            switch(open)
+            {
+              case '0':
+              window.open(url);
+              console.log(0);
+              break;
+              case '1':
+              window.location = url;
+              console.log(1);
+              break;
+            }
+          }
+          </script>
+
+          <script>
+          function keyDown(e){
+              var keycode = 0; 
+              if(CheckBrowserIsIE()){ 
+                keycode = event.keyCode; 
+              }else{ 
+                keycode = e.which; 
+              } 
+              if (keycode == 13 ) 
+              { 
+                var obtnLogin = document.getElementById("play");
+                obtnLogin.focus();
+              } 
+            }
+            function CheckBrowserIsIE(evt){
+                var result = false; 
+                var browser = navigator.appName; 
+                if(browser == "Microsoft Internet Explorer"){ 
+                  result = true; 
+                } 
+                return result; 
+              }
+              </script>
+              </article>
+
+              <article id="b">
+              <h2 class="major">驱动天空</h2>
+              <p><form action="https://www.drvsky.com/search.asp" method="post" target="_blank">
+              <input name="k" type="text" style="color:#999999;" onfocus='if(this.value=="请输入产品型号"){this.value="";}' value="请输入产品型号" id="Keywords" size="16"></p>
+              <p align="right"><input type="submit" value="搜索" name="submit" onClick="if(this.form.Keywords.value=='') {alert('请输入产品型号');return false;}"></p>
+
+              </article>
+
+              <article id="c">
+              <h2 class="major">映美</h2>
+              <p><form id="fromdrv" name="fromdrv" method="post" action="https://www.jolimark.com/service/search.php?m=1">
+              <input name="p" type="checkbox" id="p" value="1" checked="checked" />
+              <input name="d" type="checkbox" id="d" value="1" checked="checked" />
+              <input name="m" type="checkbox" id="m" value="1" checked="checked" />
+              <input name="n" type="checkbox" id="n" value="1" checked="checked" />
+              <input name="q" type="checkbox" id="q" value="1" checked="checked" />
+              <input name="search" type="text" id="search" size="25" maxlength="20" class="tabline" placeholder="在这里输入型号！" /></p>
+              <p align="right"><button id="down2">搜索</button></p>
+              </article>
+
+              <article id="d">
+              <h2 class="major">尚未完成</h2>
+              <input tabindex="2" class="form-control input-lg" id="sos" name="sousuo" type="text" placeholder="请输入型号！" value="">
+              <input type="hidden" name="qiehuan" value="1">
+              </select>
+              <br>
+              <p align="right"><button type="button" onclick="qdw()" class="btn btn-success btn-lg btn-block" ><i class="fa">搜索</i></button></p>
+              <form>
+              <script>
+              function qdw(){
+                  var k= $('#sos').val();
+                  k=trim(k);
+                  if(!k){
+                    alert('请输入型号！');
+                  }else{
+                    window.location.href="http://www.dyjqd.com/plus/search.php?q="+k+"";
+                  }
+                }
+                function trim(s){ 
+                    return trimRight(trimLeft(s)); 
+                  } 
+                  function trimLeft(s){ 
+                      if(s == null) { 
+                        return ""; 
+                      } 
+                      var whitespace = new String(" \t\n\r"); 
+                      var str = new String(s); 
+                      if (whitespace.indexOf(str.charAt(0)) != -1) { 
+                        var j=0, i = str.length; 
+                        while (j < i && whitespace.indexOf(str.charAt(j)) != -1){ 
+                          j++; 
+                        } 
+                        str = str.substring(j, i); 
+                      } 
+                      return str; 
+                    } 
+
+                    function trimRight(s){ 
+                        if(s == null) return ""; 
+                        var whitespace = new String(" \t\n\r"); 
+                        var str = new String(s); 
+                        if (whitespace.indexOf(str.charAt(str.length-1)) != -1){ 
+                          var i = str.length - 1; 
+                          while (i >= 0 && whitespace.indexOf(str.charAt(i)) != -1){ 
+                            i--; 
+                          } 
+                          str = str.substring(0, i+1); 
+                        } 
+                        return str; 
+                      } 
+                      function valuechange(){
+                          var qiehuan = document.getElementById('s1').value;
+                          if(qiehuan=='q'){
+                            document.getElementById('soform').action = '';
+                            document.getElementById('imgsrc').src = 'images/sologo.png';
+                          }
+                        }
+                        var a = document.getElementById('sos');
+                        var btn = document.getElementById('button');
+                        btn.onclick = function(){
+                            var reg = /^((https|http|ftp|rtsp|mms)?:\/\/)[^\s]+/;
+                            if(!reg.test(a.value)){
+                              if(!a.value){
+                                alert('不能为空！');
+                              }else{
+                              }
+                            }
+                          else{
+                              var url = '';
+                              window.location.href=url;
+                              return false;
+                            }
+                          }
+                          </script> 
+                          </article>
+                          </div>
+                          </div>
+                          <div id="bg"></div>
+                          <script src="./js/jquery.min.js"></script>
+                          <script src="./js/skel.min.js"></script>
+                          <script src="./js/util.js"></script>
+                          <script src="./js/main.js"></script>
+                          <script type="text/javascript">document.oncontextmenu=function(t){window.event&&(t=window.event);try{var e=t.srcElement;return"INPUT"==e.tagName&&"text"==e.type.toLowerCase()||"TEXTAREA"==e.tagName?!0:!1}catch(n){return!1}},document.onpaste=function(t){window.event&&(t=window.event);try{var e=t.srcElement;return"INPUT"==e.tagName&&"text"==e.type.toLowerCase()||"TEXTAREA"==e.tagName?!0:!1}catch(n){return!1}},document.oncopy=function(t){window.event&&(t=window.event);try{var e=t.srcElement;return"INPUT"==e.tagName&&"text"==e.type.toLowerCase()||"TEXTAREA"==e.tagName?!0:!1}catch(n){return!1}},document.oncut=function(t){window.event&&(t=window.event);try{var e=t.srcElement;return"INPUT"==e.tagName&&"text"==e.type.toLowerCase()||"TEXTAREA"==e.tagName?!0:!1}catch(n){return!1}},document.onselectstart=function(t){window.event&&(t=window.event);try{var e=t.srcElement;return"INPUT"==e.tagName&&"text"==e.type.toLowerCase()||"TEXTAREA"==e.tagName?!0:!1}catch(n){return!1}};</script>
+                                    </body>
+                                    </html>
