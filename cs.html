@@ -1,0 +1,145 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>无名〆小站</title>
+<meta charset="utf-8">
+<meta name="baidu-site-verification" content="b9lOcChmbf">
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+<link rel="shortcut icon" href="./favicon.ico" />
+<link rel="stylesheet" href="./css/main.css">
+<noscript>
+<link rel="stylesheet" href="./css/noscript.css"/>
+</noscript>
+</head>
+<body>
+<div id="wrapper">
+<header id="header">
+<div class="logo">
+
+<div id="musical">
+<font size="8" onClick="myFun();" id="musicImg">夜</font>
+<audio id="music" src="https://www.lori.tw/music.php"></audio>
+</div>
+<script>
+var flag =true;
+function myFun() {
+    var audio = document.getElementById('music');
+    if (!flag) {
+      audio.pause();
+      document.getElementById('musicImg').src = "/img/yyk.png";
+      flag = true;
+    } else {
+      audio.play();
+      document.getElementById('musicImg').src = "/img/yyg.png";
+      flag = false;
+    }}
+  </script>
+
+  </div>
+  <div class="content">
+  <div class="inner">
+
+  <h1 class="am-panel-title am-text-lg"><span style="color:#CC00FF">
+  <script>
+  var message="Z666.TK"
+  var neonbasecolor="#FFFF00"
+  var neontextcolor="#FF0000"
+  var neontextcolor2="#00FF00"
+  var flashspeed=200
+  var flashingletters=2
+  var flashingletters2=2
+  var flashpause=0 
+  var n=0
+  if (document.all||document.getElementById){
+    document.write('<font color="'+neonbasecolor+'">')
+    for (m=0;m<message.length;m++)
+    document.write('<span id="neonlight'+m+'">'+message.charAt(m)+'</span>')
+    document.write('</font>')
+  }
+else
+  document.write(message)
+  function crossref(number){
+      var crossobj=document.all? eval("document.all.neonlight"+number) : document.getElementById("neonlight"+number)
+      return crossobj
+    }
+    function neon(){
+        if (n==0){
+          for (m=0;m<message.length;m++)
+          crossref(m).style.color=neonbasecolor
+        }
+        crossref(n).style.color=neontextcolor
+        if (n>flashingletters-1) crossref(n-flashingletters).style.color=neontextcolor2 
+        if (n>(flashingletters+flashingletters2)-1) crossref(n-flashingletters-flashingletters2).style.color=neonbasecolor
+        if (n<message.length-1)
+        n++
+      else{
+          n=0
+          clearInterval(flashing)
+          setTimeout("beginneon()",flashpause)
+          return
+        }
+      }
+      function beginneon(){
+          if (document.all||document.getElementById)
+          flashing=setInterval("neon()",flashspeed)}
+        beginneon()
+        </script></span></h1>
+
+        <h5 class="am-panel-title am-text-lg"><span style="color:#66FF66"><script type="text/javascript">var today = new Date();var date = today.getDate();var day = today.getDay();var month = today.getMonth()+1;var year = today.getFullYear();var hour=today.getHours();var morning="";var week="";if (day==0) week='星期日';if (day==1) week='星期一';if (day==2) week='星期二';if (day==3) week='星期三';if (day==4) week='星期四';if (day==5) week='星期五';if (day==6) week='星期六';document.write(year+"年"+month+"月"+date+"日 "+week+" "+morning);</script></span></h5>
+
+        </div>
+        </div>
+        <nav>
+        <ul>
+        <li><a onclick="javascript:window.open('/1/');">ROM查找</a></li>
+        <li><a onclick="javascript:window.open('/2/');">驱动查找</a></li>
+        <li><a onclick="javascript:window.open('/3/');">度盘解析</a></li>
+        <li><a href="#a">在线文件</a></li>
+        <li><a onclick="javascript:window.open('/5/');">视频解析</a></li>
+        <li><a onclick="javascript:window.open('/6/');">搜索大全</a></li>
+
+        <li><a href="#b">VIP视频解析</a></li>
+        <li><a href="#c">搜索大全</a></li>
+        <li><a href="#d">空</a></li>
+        <li><a href="#e">空</a></li>
+        
+        <meta name="baidu-site-verification" content="DBlFfMx0jq" />
+        </ul>
+        </nav>
+        </header>
+        <footer id="footer">
+        <p class="copyright">©2019 无名〆小站 <a href="https://github.com/CY-SVIP">Git</a></p>
+        </footer>
+       
+        <article id="a">
+        <center><h2 class="major">在线文件</h2></center>    
+        <iframe src="https://lanzous.com/b83385" height="400" width="100%" frameborder="0"></iframe>
+        </article>
+
+        <article id="b">
+        <center><h2 class="major">VIP视频解析</h2></center>
+        <iframe src="http://cy666.tk/jx.html" height="400" width="100%" frameborder="0"></iframe>
+        </article>
+
+        <article id="c">
+        <center><h2 class="major">搜索引擎集合</h2></center>
+        <iframe src="http://a.z666.tk/6/tc.html" height="300" width="100%" frameborder="0"></iframe>
+        </article>
+
+        <article id="d">
+        <center><h2 class="major">空</h2></center>
+        </article>
+
+        <article id="e"> 
+        <center><h2 class="major">空</h2></center>
+        </article>
+
+        </div>
+        </div>
+        <div id="bg"></div>
+        <script src="./js/jquery.min.js"></script>
+        <script src="./js/skel.min.js"></script>
+        <script src="./js/util.js"></script>
+        <script src="./js/main.js"></script>
+        </body>
+        </html>
