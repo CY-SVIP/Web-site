@@ -93,7 +93,7 @@ else
         <ul>
         <li><a onclick="javascript:window.open('/1/');">ROM查找</a></li>
         <li><a onclick="javascript:window.open('/m.html');">驱动查找</a></li>
-        <li><a onclick="javascript:window.open('/3/');">度盘解析</a></li>
+        <li><a href="#d">度盘解析</a></li>
         <li><a href="#a">在线文件</a></li>
         <li><a onclick="javascript:window.open('/5/');">视频解析</a></li>
         <li><a href="#c">搜索大全</a></li>
@@ -231,11 +231,118 @@ else
         </article>
 
         <article id="d">
-        <center><h2 class="major">空</h2></center>
+        <center><h2 class="major">百度网盘文件解析下载</h2></center>
+   <script>
+              function validateForm()
+                {
+                  var link = document.forms["form1"]["surl"].value;
+                  if (link == null || link == "")
+                  {
+                    document.forms["form1"]["surl"].focus();
+                    return false;
+                  }
+                  var uk = link.match(/uk=\d+/);
+                  var shareid = link.match(/shareid=\d+/);
+                  if (uk != null && shareid != null)
+                  {
+                    uk = uk[0].match(/\d+/)[0];
+                    shareid = shareid[0].match(/\d+/)[0];
+                    document.forms["form1"]["surl"].value = "";
+                    $("form").append('<input type="hidden" name="uk" value="'+uk+'">');
+                    $("form").append('<input type="hidden" name="shareid" value="'+shareid+'">');
+                    return true;
+                  }
+                  var surl = link.match(/surl=[A-Za-z0-9-_]{5,}/);
+                  if (surl == null)
+                  {
+                    surl = link.match(/1[A-Za-z0-9-_]{5,}/);
+                    if (surl == null)
+                    {
+                      document.forms["form1"]["surl"].focus();
+                      return false;
+                    }
+                  else
+                    {
+                      surl = surl[0];
+                    }
+                  }
+                else
+                  {
+                    surl = "1"+surl[0].match(/[A-Za-z0-9-_]{5,}/)[0];
+                  }
+                  document.forms["form1"]["surl"].value = surl;
+                  return true;
+                }
+                </script>
+                </head>
+                <body>
+                <form name="form1" method="get" action="https://www.baiduwp.com/s/" onsubmit="return validateForm()">
+                <p><input type="text" name="surl" placeholder="文件链接"></p>
+                <p><input type="text" name="pwd" placeholder="提取码"></p>
+                <center><button type="submit">开始解析</button></center>
+                </form>
         </article>
 
         <article id="e"> 
-        <center><h2 class="major">空</h2></center>
+        <center><h2 class="major">安卓ROM查找</h2></center>
+   <select id="jk">
+
+<option value="http://so.romzhijia.net/cse/search?s=12725138872909822094&q=">ROM之家</option>
+<option value="http://shuajitt.com/plus/search.php?kwtype=0&q=">刷机天堂</option>
+<option value="https://m.huaweirom.com/hua/search.html?kwtype=0&q=">华为刷机网</option>
+<option value="http://url88.cn/u/2VPR1?keyword=">ROM云盘①</option>
+<option value="http://url88.cn/u/C6oeu?keyword=">ROM云盘②</option>
+<option value="http://url88.cn/u/ByQXz?keyword=">ROM云盘③</option>
+<option value="http://url88.cn/u/BYNiQ?keyword=">ROM云盘④</option>
+
+                </select>
+                <br>
+                <input type="text" placeholder="请输入关键字!" id="sourl" onkeydown="keyDown(event)">
+                <br>
+                <center><p><button type="button" id="ana" onClick="sosuo()">搜索</button></p></center>
+
+                <script type="text/javascript">eval(function(p,a,c,k,e,d){e=function(c){return(c<a?"":e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)d[e(c)]=k[c]||e(c);k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('b a(){0 6=1.2("9").4;0 5=1.2("3");0 3=1.2("3").c;0 8=5.e[3].4;0 7=1.2("f");7.d=8+6}',16,16,'var|document|getElementById|jk|value|jkurl|diz|cljurl|jkv|url|dihejk|function|selectedIndex|src|options|player'.split('|'),0,{}))
+                        function sosuo() {
+                            var url = document.getElementById("sourl").value;
+                            {
+                              if ( document.getElementById("sourl").value=="") 
+                              {
+                                alert('请选择接口并输入关键字!'); 
+                                return false;
+                              }
+                            }
+                            var diz = document.getElementById("sourl").value;
+                            var jkurl = document.getElementById("jk");
+                            var jk = document.getElementById("jk").selectedIndex;
+                            var jkv = jkurl.options[jk].value;
+                            var cljurl = document.getElementById("player");
+                            window.open(jkv + diz,"_blank");
+                          }
+                          </script>
+
+                          <script>
+                          function keyDown(e){
+                              var keycode = 0; 
+                              if(CheckBrowserIsIE()){ 
+                                keycode = event.keyCode; 
+                              }else{ 
+                                keycode = e.which; 
+                              } 
+                              if (keycode == 13 ) 
+                              { 
+                                var obtnLogin = document.getElementById("ana"); //submit_btn为按钮ID
+                                obtnLogin.focus();
+                              } 
+                            }
+                            function CheckBrowserIsIE(evt){
+                                var result = false; 
+                                var browser = navigator.appName; 
+                                if(browser == "Microsoft Internet Explorer"){ 
+                                  result = true; 
+                                } 
+                                return result; 
+                              }
+                              </script>
         </article>
 
         </div>
