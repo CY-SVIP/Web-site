@@ -97,7 +97,8 @@ else
         <li><a href="#a">在线文件</a></li>
         <li><a onclick="javascript:window.open('/5/');">视频解析</a></li>
         <li><a href="#c">搜索大全</a></li>
-        
+        <li><a href="#b">在线图床</a></li>
+
         <meta name="baidu-site-verification" content="DBlFfMx0jq" />
         </ul>
         </nav>
@@ -112,8 +113,233 @@ else
         </article>
 
         <article id="b">
-        <center><h2 class="major">VIP视频解析</h2></center>
-        <iframe src="http://cy666.tk/jx.html" height="400" width="100%" frameborder="0"></iframe>
+        <center><h2 class="major">在线图片直链生成</h2></center>
+       
+          <body>
+        <div class="container">
+        <center>
+        <script type="text/javascript">
+        /*960*90 图文 创建于 2017/3/3*/
+        var cpro_id = "u2910604";
+        </script>
+        </center>
+        <div class="jumbotron">
+        <div class="mselector">
+        <label id="lb"></label><br>
+         <label class="form-label ">上传</label>
+        <p><input type="button" value="选择" class="btn btn-lg btn-info" onclick="getFile()"></p>
+        <input style="display: none" type="file" name="file" id="getF" accept="image/*" onchange="clickF()">
+        <label class="form-label ">结果</label>
+        <button type="button" class="btn btn-lg btn-info">…</button>
+
+        </div>
+        <script>
+        function getFile(){
+            $("#getF").click();
+          }
+          var filename="";
+          function clickF() {
+              filename=$("#getF").val();
+              var filenames=filename.split("\\");
+              filename=filenames[filenames.length-1];
+              $("#lb").text(filename);
+            }
+            </script> 
+            <div class="form-group hidden-xs" style="margin-top: 10px;">
+            <div class="row form-inline">
+            <div class="col-xs-12">
+            <label class="form-label ">协议</label>
+            <select class="form-control" id="sinaProtocal" required style="width:80px">
+            <option value="http">http</option>
+            <option value="https">https</option>
+            </select>
+            &nbsp;
+            <label class="form-label ">域名</label>
+            <select class="form-control" id="sinaDomain" required style="width:140px">
+            <option value="tva1">tva1(可用)</option>
+            <option value="tvax1">tvax1(可用)</option>
+            <option value="ww1">ww1(限外链)</option>
+            <option value="ws1">ws1(限外链)</option>
+            <option value="wx1">wx1(限外链)</option>
+            </select>
+            &nbsp;
+            <label class="form-label">尺寸</label>
+            <select class="form-control" id="sinaSize" required style="width:140px">
+            <option value="large">large(原图)</option>
+            <option value="mw690">mw690(690高)</option>
+            <option value="bmiddle">bmiddle(中图)</option>
+            <option value="small">small(小图)</option>
+            <option value="mw2048">mw2048(超大)</option>
+            <option value="mw1024">mw1024(超大)</option>
+            <option value="orj480">orj480</option>
+            <option value="orj360">orj360</option>
+            <option value="thumb150">thumb150(缩略图)</option>
+            <option value="square">square</option>
+            </select>
+            </div>
+            </div>
+            </div>
+            &nbsp;
+            <label class="form-label ">链接</label>
+            <textarea id="url-res-txt" class="form-control" rows="5" id="urls" placeholder="上传后的图片外链地址将显示在此处哦、下方会同时显示外链地址和预览图。"></textarea>
+            <!-- 图片预览 -->
+            <div class="preview">
+            <br>
+            </div>
+            </div>
+
+            <center>
+            <script type="text/javascript">
+            /*960*90 图文 创建于 2017/3/3*/
+            var cpro_id = "u2910604";
+            </script>
+            </center>
+            <script src="https://pic.xiaojianjian.net/js/jquery.min.js"></script>
+            <script src="https://pic.xiaojianjian.net/plugin/bootstrap/js/bootstrap.min.js"></script>
+            <script src="https://pic.xiaojianjian.net/js/dropdown.min.js"></script>
+            <script type="text/javascript">
+            $(document).ready(function() {
+                if(top.location.href != self.location.href){
+                  location.href= "http://pic.xiaojianjian.net";
+                }
+
+                $('.picurl > input').bind('focus mouseover', function() {
+                    if (this.value) {
+                      this.select()
+                    }
+                  });
+                  $("input[type='file']").change(function(e) {
+                      imagesUpload(this.files)
+                    });
+                    var obj = $('body');
+                    obj.on('dragenter', function(e) {
+                        e.stopPropagation();
+                        e.preventDefault()
+                      });
+                      obj.on('dragover', function(e) {
+                          e.stopPropagation();
+                          e.preventDefault()
+                        });
+                        obj.on('drop', function(e) {
+                            e.preventDefault();
+                            imagesUpload(e.originalEvent.dataTransfer.files)
+                          })
+                        });
+
+                        /**
+                        * 网络图片上传
+                        */
+                        var urlUpload = function() {
+                            var urls = $("#urls").val();
+                            var url_arr = urls.split("\n");
+
+                            if(urls == "" || url_arr.length == 0) {
+                              alert("请贴入需要上传的网络图片地址.");
+                              return;
+                            }
+
+                            $('#url_upload_model').modal('hide');
+                            $('.mselector > button')[1].innerHTML = '上传中';
+                            for(var i = 0; i < url_arr.length; i++) {
+                              setTimeout(function() {
+                                  $.ajax({
+                                    url: 'https://pic.xiaojianjian.net/images/uploadByUrl',
+                                    type: 'POST',
+                                    data: {
+                                      url: url_arr[i],
+                                      sinaProtocal: $("#sinaProtocal").val(),
+                                      sinaDomain: $("#sinaDomain").val(),
+                                      sinaSize: $("#sinaSize").val()
+                                    },
+                                    cache: false,
+                                    dataType: 'json',
+                                    async: false,
+                                    success: function(data) {
+
+                                        if (typeof data.original_pic != 'undefined') {
+                                          $('.mselector > button')[1].innerHTML = '上传成功';
+                                          $('#url-res-txt').append(data.original_pic + '\n');
+
+                                          // 生成预览图
+                                          var apc = "<img src='" + data.original_pic + "' referrerpolicy=\"no-referrer\" /><p>&nbsp;</p>";
+                                          $('.preview').css('display', 'block');
+                                          $(".preview>hr").before(apc)
+                                        } else {
+                                          $('.mselector > button')[1].innerHTML = '上传失败';
+                                          alert(data.error_msg)
+                                        }
+                                      },
+                                      error: function(XMLResponse){
+                                          alert("error:" + XMLResponse.responseText);
+                                        }
+                                      });
+                                    }, 100);
+                                  }
+                                };
+
+                                /**
+                                * 普通图片上传
+                                */
+                                var imagesUpload = function(files) {
+                                    var flag = 0;
+                                    $('textarea').empty();
+                                    $(files).each(function(key, value) {
+                                        $('.mselector > button')[0].innerHTML = '上传中';
+
+                                        setTimeout(function() {
+                                            image_form = new FormData();
+                                            image_form.append("file", value);
+                                            image_form.append("sinaProtocal", $("#sinaProtocal").val());
+                                            image_form.append("sinaDomain", $("#sinaDomain").val());
+                                            image_form.append("sinaSize", $("#sinaSize").val());
+
+                                            $.ajax({
+                                              url: 'https://pic.xiaojianjian.net/images/upload',
+                                              type: 'POST',
+                                              data: image_form,
+                                              mimeType: 'multipart/form-data',
+                                              contentType: false,
+                                              cache: false,
+                                              processData: false,
+                                              dataType: 'json',
+                                              async: false,
+                                              success: function(data) {
+                                                  flag++;
+
+                                                  if (typeof data.original_pic != 'undefined') {
+                                                    $('#url-res-txt').append(data.original_pic + '\n');
+                                                    $('.mselector > button')[0].innerHTML = '成功 ' + flag + '/' + files.length;
+
+                                                    // 生成预览图
+                                                    var apc = "<img src='" + data.original_pic + "' referrerpolicy=\"no-referrer\" /><p>&nbsp;</p>"; 
+                                                    $('.preview').css('display', 'block');
+                                                    $(".preview>hr").before(apc)
+                                                  } else {
+                                                    $('.mselector > button')[0].innerHTML = '第' + flag + '张上传失败'
+                                                  }
+
+                                                  if (flag == $("input[type='file']")[0].files.length) {
+                                                    if (typeof data.original_pic != 'undefined') {
+                                                      $('.mselector > button')[0].innerHTML = '上传成功'
+                                                    } else {
+                                                      $('.mselector > button')[0].innerHTML = '上传失败';
+                                                      $('#url-res-txt').append(data.error_msg + '\n');
+                                                      alert(data.error_msg)
+                                                    }
+                                                  }
+
+                                                },
+                                                error: function(XMLResponse){
+                                                    alert("error:" + XMLResponse.responseText);
+                                                  }
+                                                });
+
+                                              }, 100);
+                                            })
+                                          };
+
+                                          </script>
+                                          </body>
         </article>
 
         <article id="c">
