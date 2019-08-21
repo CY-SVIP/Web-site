@@ -27,6 +27,7 @@
          language:(navigator.browserLanguage || navigator.language).toLowerCase()
 	}
     if(browser.versions.android || browser.versions.iPhone || browser.versions.ios){
+        alert("手机访问此页面建议打开屏幕旋转后横屏操作，否则下载时无法接受许可协议及下载。");
         window.location.href="/m/1/mobiel.html";
     }else{
    window.location.href="/m/1/pc.html"
