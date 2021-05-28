@@ -93,7 +93,7 @@ else
         <ul>
         <li><a href="#e">Q绑查询</a></li>
         <li><a onclick="javascript:window.open('http://y666.pro:666/fc/');">FC游戏机</a></li>
-        <!---<li><a href="#d">度盘解析</a></li>--->
+        <li><a href="#d">短信轰炸</a></li>
         <li><a href="#a">在线文件</a></li>
         <li><a onclick="javascript:window.open('/5/');">视频解析</a></li>
         <li><a href="#c">搜索大全</a></li>
@@ -228,56 +228,13 @@ else
         </article>
 
         <article id="d">
-        <center><h2 class="major">百度网盘文件解析下载</h2></center>
-   <script>
-              function validateForm()
-                {
-                  var link = document.forms["form1"]["surl"].value;
-                  if (link == null || link == "")
-                  {
-                    document.forms["form1"]["surl"].focus();
-                    return false;
-                  }
-                  var uk = link.match(/uk=\d+/);
-                  var shareid = link.match(/shareid=\d+/);
-                  if (uk != null && shareid != null)
-                  {
-                    uk = uk[0].match(/\d+/)[0];
-                    shareid = shareid[0].match(/\d+/)[0];
-                    document.forms["form1"]["surl"].value = "";
-                    $("form").append('<input type="hidden" name="uk" value="'+uk+'">');
-                    $("form").append('<input type="hidden" name="shareid" value="'+shareid+'">');
-                    return true;
-                  }
-                  var surl = link.match(/surl=[A-Za-z0-9-_]{5,}/);
-                  if (surl == null)
-                  {
-                    surl = link.match(/1[A-Za-z0-9-_]{5,}/);
-                    if (surl == null)
-                    {
-                      document.forms["form1"]["surl"].focus();
-                      return false;
-                    }
-                  else
-                    {
-                      surl = surl[0];
-                    }
-                  }
-                else
-                  {
-                    surl = "1"+surl[0].match(/[A-Za-z0-9-_]{5,}/)[0];
-                  }
-                  document.forms["form1"]["surl"].value = surl;
-                  return true;
-                }
-                </script>
-                </head>
-                <body>
-                <form name="form1" method="get" action="https://www.baiduwp.com/s/" onsubmit="return validateForm()">
-                <p><input type="text" name="surl" placeholder="文件链接"></p>
-                <p><input type="text" name="pwd" placeholder="提取码"></p>
-                <center><button type="submit">开始解析</button></center>
-                </form>
+        <center><h2 class="major">短信轰炸机</h2></center>
+            
+        <form id="ffsearch" name="ffsearch" method="post" action="" onsubmit="javascript:this.action='http://acg886.com/api.php?hm=(?)&ok='.replace('(?)',this.key.value)" target="_blank">
+        <input autovalue="" class="searchInput" placeholder="请输入手机号码！" name="key" type="text" style="border-radius:2px">
+        <br>
+        <center><input type="submit" value="开始轰炸"></form></center>
+
         </article>
 
         <article id="e"> 
