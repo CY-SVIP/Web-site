@@ -1,0 +1,202 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="email=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="full-screen" content="yes">
+    <meta name="browsermode" content="application">
+    <meta name="x5-orientation" content="landscape">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="x5-page-mode" content="app">
+	<meta itemprop="name" content="FC/小霸王在线游戏机" />
+	<meta itemprop="image" content="" />
+	<meta name="description" itemprop="description" content="可在手机电脑上在线玩fc游戏的网站,近乎完美的还原任天堂FC/NES原版ROM游戏的视频和声音。" />
+    <title>FC/小霸王在线游戏机</title>
+    <meta name="keywords" content="在线玩,fc游戏在线玩,fc在线模拟器,nes在线模拟器,魂斗罗,超级玛丽" />
+    <meta name="description" content="可在手机电脑上在线玩fc游戏的网站,近乎完美的还原任天堂FC/NES原版ROM游戏的视频和声音。" />
+    <link href="css/jsnes.css" tppabs="css/jsnes.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <div class="main">
+        <div class="panel">
+            <div class="controller-area">
+                <div class="controller">
+                    <div id="controls-direction">
+                        <button role="BUTTON_UP" class="up joydirection" id="joystick_btn_up">up</button>
+                        <button role="BUTTON_RIGHT" class="right joydirection" id="joystick_btn_right">right</button>
+                        <button role="BUTTON_DOWN" class="down joydirection" id="joystick_btn_down">down</button>
+                        <button role="BUTTON_LEFT" class="left joydirection" id="joystick_btn_left">left</button>
+                    </div>
+                </div>
+             
+                <div id="musical">
+<font size="8" onClick="myFun();" id="musicImg" class="joy">🎶</font>
+                </div>
+                
+                <div><a href="javascript:void(0)" onclick="alert('使用方法：\n\n1.选择游戏\n\n2.开启声音(可选)\n\n3.如果想竖屏游玩可点击放大隐藏按钮\n\n4.如果想横屏游玩不用点击放大按钮\n手机或浏览器开启横屏即可\n\n5.点击左上角音乐按钮可以随机播放音乐\n(歌曲为每次进入随机获取，播放结束后可双击重新播放)')" class="readme">帮助</a></div>
+            </div>
+            <div class="function-area">
+                <div class="screen">
+                    <div id="emulator" align="center" style="width:100%;height:100%"></div>
+                </div>
+                <div class="function">
+                    <button class="controls-center-select joybtn" id="joystick_btn_select" role="BUTTON_SELECT">选择</button>
+                    <button class="controls-center-start joybtn" id="joystick_btn_start" role="BUTTON_START">开始</button>
+                </div>
+            </div>
+            <div class="action-area">
+                <div class="action">
+                    <div id="controls-fire">
+                        <button class="a joybtn" role="BUTTON_A" id="joystick_btn_A">A</button>
+                        <button class="b joybtn" role="BUTTON_B" id="joystick_btn_B">B</button>
+                    </div>
+                </div>
+            </div>
+            <div class="sign">FC红白机 <br> 经典小霸王</div>
+        </div>
+    </div>
+</body>
+<script src="js/lib/jquery-1.4.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/lib/dynamicaudio-min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/source/nes.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/source/utils.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/source/cpu.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/source/keyboard.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/source/mappers.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/source/papu.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/source/ppu.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/source/rom.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/source/ui.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/lib/debug.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" charset="utf-8">
+    var nes;
+    $(function() {
+        nes = new JSNES({
+            'ui': $('#emulator').JSNESUI({
+                "经典-80余款经典游戏": [
+                    ['魂斗罗(30命)', 'roms/Contra1(U)30.nes'],
+                    ['超级玛丽(美版)', 'roms/(W) Super Mario Bros. [!].nes'],
+                    ['坦克(中国版)', 'roms/(Ch) Missile Tank.nes'],
+                    ['双截龙', 'roms/Double Dragon1.nes'],
+					['超级玛丽', 'roms/Super Mario Bros. (JU) (PRG0) [!].nes'],
+					['冒险岛', 'roms/maoxiandao.nes'],
+					['魂斗罗', 'roms/hun.nes'],
+					['中国象棋', 'roms/Zhong Guo Xiang Qi.nes'],
+					['坦克大战(未知)', 'roms/tanke.nes'],
+					['雪人兄弟', 'roms/xueren.nes'],
+					['越野摩托', 'roms/Motor.nes'],
+					['赤影战士', 'roms/Kage.nes'],
+					['炸弹人', 'roms/zhadan.nes'],
+					['马戏团', 'roms/ma.nes'],
+					['影子传说', 'roms/Kage.nes'],
+					['沙罗曼蛇', 'roms/Life Force [!].nes'],
+					['脱狱', 'roms/Cross Fire (J).nes'],
+					['功夫', 'roms/(J) (V1.2) Yie Ar Kung-Fu [!].nes'],
+					['双截龙2', 'roms/Double Dragon2.nes'],
+					['三目童子', 'roms/3.nes'],
+					['恶魔城1', 'roms/emc.nes'],
+					['洛克人1', 'roms/lkr.nes'],
+					['人间兵器', 'roms/rjbq.nes'],
+					['忍者神龟1', 'roms/sg1.nes'],
+					['激龟快打', 'roms/sg4.nes'],
+					['泡泡龙2', 'roms/ppl2.nes'],
+					['西游记1', 'roms/xyj1.nes'],
+					['沙罗曼蛇', 'roms/Lifeforce (U).nes'],
+					['淘金者', 'roms/Championship Lode Runner (J).nes'],
+					['冒险岛3中文版', 'roms/mxd3zwb.nes'],
+					['三只小猪', 'roms/szxz.nes'],
+					['雪人兄弟加强版', 'roms/xrxdjqb.nes'],
+			        ['魂斗罗', 'roms/hun.nes'],
+                    ['魂斗罗(30命)', 'roms/Contra1(U)30.nes'],
+                    ['魂斗罗2(美版)', 'roms/Super Contra (U).nes'],
+                    ['魂斗罗3', 'roms/hundouluoliliangzhongwenban.nes'],
+                    ['超级玛丽', 'roms/Super Mario Bros. (JU) (PRG0) [!].nes'],
+                    ['超级玛丽(美版)', 'roms/(W) Super Mario Bros. [!].nes'],
+                    ['超级玛丽2(美版)', 'roms/Super Mario Bros. 2 (USA) (Rev A).nes'],
+                    ['超级玛丽3(美版)', 'roms/Super Mario Bros. 3 (USA) (Rev A).nes'],
+                    ['超级玛丽(超级马里奥兄弟)', 'roms/Mario Diapers (J).nes'],
+                    ['坦克(中国版)', 'roms/(Ch) Missile Tank.nes'],
+                    ['双截龙', 'roms/Double Dragon1.nes'],
+                    ['双截龙2', 'roms/shuangjielong2.nes'],
+                    ['双截龙3', 'roms/shuangjielong3.nes'],
+					['冒险岛', 'roms/maoxiandao.nes'],
+					['冒险岛2', 'roms/gaoqiaomingrenzhimaoxiandao2.nes'],
+					['冒险岛3', 'roms/gaoqiaomingrenzhimaoxiandao3.nes'],
+					['中国象棋', 'roms/Zhong Guo Xiang Qi.nes'],
+					['坦克大战(未知)', 'roms/tanke.nes'],
+					['雪人兄弟', 'roms/xueren.nes'],
+					['越野摩托', 'roms/Motor.nes'],
+					['赤影战士', 'roms/Kage.nes'],
+					['炸弹人', 'roms/zhadan.nes'],
+					['马戏团', 'roms/ma.nes'],
+					['影子传说', 'roms/Kage.nes'],
+					['沙罗曼蛇', 'roms/Life Force [!].nes'],
+					['脱狱', 'roms/Cross Fire (J).nes'],
+					['功夫', 'roms/(J) (V1.2) Yie Ar Kung-Fu [!].nes'],
+					['双截龙2', 'roms/Double Dragon2.nes'],
+					['三目童子', 'roms/3.nes'],
+					['恶魔城1', 'roms/emc.nes'],
+					['洛克人1', 'roms/lkr.nes'],
+					['人间兵器', 'roms/rjbq.nes'],
+					['忍者神龟1', 'roms/sg1.nes'],
+					['激龟快打', 'roms/sg4.nes'],
+					['泡泡龙2', 'roms/ppl2.nes'],
+					['西游记1', 'roms/xyj1.nes'],
+					['沙罗曼蛇', 'roms/Lifeforce (U).nes'],
+					['淘金者', 'roms/Championship Lode Runner (J).nes'],
+					['爱的小屋', 'roms/aidexiaowuzhongwenban.nes'],
+					['大力水手', 'roms/Popeye (W) (PRG1) [!].nes'],
+					['敲冰块', 'roms/qiaobingkuai.nes'],
+					['猫和老鼠', 'roms/tangmuhejieruiMShanhuaban.nes'],
+					['拆屋工/拆除队', 'roms/chaiwugong.nes'],
+					['蝙蝠侠3', 'roms/BATMAN3.NES'],
+					['成龙踢馆', 'roms/chenglongtiguan.nes'],
+					['影子传说', 'roms/yingzichuanshuo.nes'],
+					['大金刚1', 'roms/dajingang1.nes'],
+					['大金刚2', 'roms/dajingang2.nes'],
+					['大金刚3', 'roms/dajingang3.nes'],
+					['绿色兵团', 'roms/lvsebingtuan.nes'],
+					['电梯行动', 'roms/ElevatorAction.nes'],
+					['洛克人1', 'roms/luokeren.nes'],
+					['洛克人2', 'roms/luokeren2.nes'],
+					['洛克人3', 'roms/luokeren3.nes'],
+					['洛克人4(游戏较大打开缓慢)', 'roms/luokeren4.nes'],
+					['洛克人5(游戏较大打开缓慢)', 'roms/luokeren5.nes'],
+					['洛克人6(游戏较大打开缓慢)', 'roms/luokeren6.nes'],
+					['洛克人7(游戏较大打开缓慢)', 'roms/luokeren7.nes'],
+					
+					
+					
+                ],
+            })
+        });
+    });
+</script>
+
+<audio id="music" src="https://api.uomg.com/api/rand.music?sort=热歌榜&format=mp3"></audio>
+</div>
+<script>
+var flag =true;
+function myFun() {
+    var audio = document.getElementById('music');
+    if (!flag) {
+      audio.pause();
+      document.getElementById('musicImg').src = "/img/yyk.png";
+      flag = true;
+    } else {
+      audio.play();
+      document.getElementById('musicImg').src = "/img/yyg.png";
+      flag = false;
+    }}
+  </script>
+
+
+
+<!--[if IE]>
+    <script type="text/vbscript" src="jsnes-ie-hacks.vbscript" tppabs="http://fc.liflag.cn/source/jsnes-ie-hacks.vbscript"></script>
+<![endif]-->
+</html>
