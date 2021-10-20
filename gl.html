@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>无名〆小站</title>
+<title>路由控制面板</title>
 <meta charset="utf-8">
 <meta name="baidu-site-verification" content="b9lOcChmbf">
 <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
@@ -91,11 +91,13 @@ else
         </div>
         <nav>
         <ul>
-        <li><a onclick="javascript:window.open('https://y666.pro:66');">ESXI管理</a></li>
-        <li><a onclick="javascript:window.open('http://y666.pro:99');">爱快管理</a></li>
-        <li><a onclick="javascript:window.open('http://y666.pro:55');">OpenWrt管理</a></li>
-        <li><a onclick="javascript:window.open('http://y666.pro:88');">群晖管理</a></li>
+        <li><a onclick="javascript:window.open('https://23333.oicp.vip:66');">ESXI管理</a></li>
+        <li><a onclick="javascript:window.open('http://23333.oicp.vip:99');">iKuai爱快</a></li>
+        <li><a onclick="javascript:window.open('http://23333.oicp.vip:55');">OpenWrt</a></li>
+        <li><a onclick="javascript:window.open('http://23333.oicp.vip:88');">群晖管理</a></li>
+        <li><a onclick="javascript:window.open('https://23333.oicp.vip:66/ui/#/host/vms/7');">启动win10</a></li>
         <li><a href="#b">远程桌面</a></li>
+        <li><a href="#c">端口测试</a></li>
 
         <meta name="baidu-site-verification" content="DBlFfMx0jq" />
         </ul>
@@ -106,17 +108,102 @@ else
         </footer>
         <div id="main"> 
         <article id="a">
-        <center><h2 class="major">测试</h2></center>    
+        <center><h2 class="major">网页</h2></center>    
         <iframe src="https://" height="400" width="100%" frameborder="0"></iframe>
         </article>
 
         <article id="b">
         <center><h2 class="major">远程桌面</h2></center>
-        <center>主用端口：<input type="text" style="width:200px; height:50px;  font-size:20px" placeholder="端口" name="key" value="y666.pro:77"><center>
+        <center>主用端口：<input type="text" style="width:200px; height:50px;  font-size:20px" placeholder="端口" name="key" value="23333.oicp.vip:77"><center>
         <center>备用端口：<input type="text" style="width:200px; height:50px;  font-size:20px" placeholder="端口" name="key" value="cy666.f3322.net:77"><center>
         <br>
         </article>
        
+<article id="c">
+        <center><h2 class="major">端口测试</h2></center>
+         <div class="content">
+        <div class="pure-form"> 
+        <select id='sel'></select>
+        <br>
+        <p><center><input type="text" id="url" onkeydown="keyDown(event)" placeholder="输入端口号！" style="border-radius:2px"></center></p>
+        <br>
+        <select id='open'>
+        <option value='0'>新窗口打开</option>
+        <option value='1'>本窗口打开</option>
+        </select>
+        <p><center><button id="play" onclick="play();">打开页面</button></center></p>
+        </div>
+        </div>
+        <script>
+        var data = [
+
+        {name:"HTTP://23333.oicp.vip",url:"http://23333.oicp.vip:"},
+
+        {name:"HTTPS://23333.oicp.vip",url:"https://23333.oicp.vip:"},
+
+        {name:"HTTP://cy666.f3322.net",url:"http://cy666.f3322.net:"},
+
+        {name:"HTTPS://cy666.f3322.net",url:"https://cy666.f3322.net:"},
+
+
+        ];
+        for (var i in data)
+        {
+          var opt = document.createElement ("option");
+          opt.value = data[i].url;
+          opt.innerText = data[i].name;
+          document.getElementById('sel').appendChild (opt);
+        }
+
+        function play(){
+            var url = document.getElementById("url").value;
+            { 
+              if ( document.getElementById("url").value=="") 
+              {
+                alert('请选择接口并输入端口号!'); 
+                return false;
+              }
+            }
+            var api = document.getElementById("sel").value;
+            var open = document.getElementById("open").value;
+            url = api + url;
+            switch(open)
+            {
+              case '0':
+              window.open(url);
+              console.log(0);
+              break;
+              case '1':
+              window.location = url;
+              console.log(1);
+              break;
+            }
+          }
+          </script>
+          <script>
+          function keyDown(e){
+              var keycode = 0; 
+              if(CheckBrowserIsIE()){ 
+                keycode = event.keyCode; 
+              }else{ 
+                keycode = e.which; 
+              } 
+              if (keycode == 13 ) 
+              { 
+                var obtnLogin = document.getElementById("play");
+                obtnLogin.focus();
+              } 
+            }
+            function CheckBrowserIsIE(evt){
+                var result = false; 
+                var browser = navigator.appName; 
+                if(browser == "Microsoft Internet Explorer"){ 
+                  result = true; 
+                } 
+                return result; 
+              }
+              </script>
+        </article>
 
         </div>
         </div>
