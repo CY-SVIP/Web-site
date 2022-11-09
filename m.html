@@ -1,10 +1,464 @@
-<SCRIPT LANGUAGE="Javascript">
-var Words ="%3C%21DOCTYPE%20HTML%3E%0A%3Chtml%3E%0A%3Chead%3E%0A%3Ctitle%3E%u65E0%u540D%u3006%u5C0F%u7AD9%3C/title%3E%0A%3Cmeta%20charset%3D%22utf-8%22%3E%0A%3Cmeta%20name%3D%22baidu-site-verification%22%20content%3D%22b9lOcChmbf%22%3E%0A%3Cmeta%20name%3D%22viewport%22%20content%3D%22width%3Ddevice-width%2Cinitial-scale%3D1%2Cuser-scalable%3Dno%22%3E%0A%3Clink%20rel%3D%22shortcut%20icon%22%20href%3D%22./favicon.ico%22%20/%3E%0A%3Clink%20rel%3D%22stylesheet%22%20href%3D%22./css/main.css%22%3E%0A%3Cnoscript%3E%0A%3Clink%20rel%3D%22stylesheet%22%20href%3D%22./css/noscript.css%22/%3E%0A%3C/noscript%3E%0A%3C/head%3E%0A%3Cbody%3E%0A%3Cdiv%20id%3D%22wrapper%22%3E%0A%3Cheader%20id%3D%22header%22%3E%0A%3Cdiv%20class%3D%22logo%22%3E%0A%0A%3Cdiv%20id%3D%22musical%22%3E%0A%3Cfont%20size%3D%228%22%20onClick%3D%22myFun%28%29%3B%22%20id%3D%22musicImg%22%3E%u591C%3C/font%3E%0A%3Caudio%20id%3D%22music%22%20src%3D%22https%3A//api.uomg.com/api/rand.music%3Fsort%3D%u70ED%u6B4C%u699C%26format%3Dmp3%22%3E%3C/audio%3E%0A%3C/div%3E%0A%3Cscript%3E%0Avar%20flag%20%3Dtrue%3B%0Afunction%20myFun%28%29%20%7B%0A%20%20%20%20var%20audio%20%3D%20document.getElementById%28%27music%27%29%3B%0A%20%20%20%20if%20%28%21flag%29%20%7B%0A%20%20%20%20%20%20audio.pause%28%29%3B%0A%20%20%20%20%20%20document.getElementById%28%27musicImg%27%29.src%20%3D%20%22/img/yyk.png%22%3B%0A%20%20%20%20%20%20flag%20%3D%20true%3B%0A%20%20%20%20%7D%20else%20%7B%0A%20%20%20%20%20%20audio.play%28%29%3B%0A%20%20%20%20%20%20document.getElementById%28%27musicImg%27%29.src%20%3D%20%22/img/yyg.png%22%3B%0A%20%20%20%20%20%20flag%20%3D%20false%3B%0A%20%20%20%20%7D%7D%0A%20%20%3C/script%3E%0A%0A%20%20%3C/div%3E%0A%20%20%3Cdiv%20class%3D%22content%22%3E%0A%20%20%3Cdiv%20class%3D%22inner%22%3E%0A%0A%20%20%3Ch1%20class%3D%22am-panel-title%20am-text-lg%22%3E%3Cspan%20style%3D%22color%3A%23CC00FF%22%3E%0A%20%20%3Cscript%3E%0A%20%20var%20message%3D%22M.Z666.TK%22%0A%20%20var%20neonbasecolor%3D%22%23FFFF00%22%0A%20%20var%20neontextcolor%3D%22%23FF0000%22%0A%20%20var%20neontextcolor2%3D%22%2300FF00%22%0A%20%20var%20flashspeed%3D200%0A%20%20var%20flashingletters%3D2%0A%20%20var%20flashingletters2%3D2%0A%20%20var%20flashpause%3D0%20%0A%20%20var%20n%3D0%0A%20%20if%20%28document.all%7C%7Cdocument.getElementById%29%7B%0A%20%20%20%20document.write%28%27%3Cfont%20color%3D%22%27+neonbasecolor+%27%22%3E%27%29%0A%20%20%20%20for%20%28m%3D0%3Bm%3Cmessage.length%3Bm++%29%0A%20%20%20%20document.write%28%27%3Cspan%20id%3D%22neonlight%27+m+%27%22%3E%27+message.charAt%28m%29+%27%3C/span%3E%27%29%0A%20%20%20%20document.write%28%27%3C/font%3E%27%29%0A%20%20%7D%0Aelse%0A%20%20document.write%28message%29%0A%20%20function%20crossref%28number%29%7B%0A%20%20%20%20%20%20var%20crossobj%3Ddocument.all%3F%20eval%28%22document.all.neonlight%22+number%29%20%3A%20document.getElementById%28%22neonlight%22+number%29%0A%20%20%20%20%20%20return%20crossobj%0A%20%20%20%20%7D%0A%20%20%20%20function%20neon%28%29%7B%0A%20%20%20%20%20%20%20%20if%20%28n%3D%3D0%29%7B%0A%20%20%20%20%20%20%20%20%20%20for%20%28m%3D0%3Bm%3Cmessage.length%3Bm++%29%0A%20%20%20%20%20%20%20%20%20%20crossref%28m%29.style.color%3Dneonbasecolor%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20crossref%28n%29.style.color%3Dneontextcolor%0A%20%20%20%20%20%20%20%20if%20%28n%3Eflashingletters-1%29%20crossref%28n-flashingletters%29.style.color%3Dneontextcolor2%20%0A%20%20%20%20%20%20%20%20if%20%28n%3E%28flashingletters+flashingletters2%29-1%29%20crossref%28n-flashingletters-flashingletters2%29.style.color%3Dneonbasecolor%0A%20%20%20%20%20%20%20%20if%20%28n%3Cmessage.length-1%29%0A%20%20%20%20%20%20%20%20n++%0A%20%20%20%20%20%20else%7B%0A%20%20%20%20%20%20%20%20%20%20n%3D0%0A%20%20%20%20%20%20%20%20%20%20clearInterval%28flashing%29%0A%20%20%20%20%20%20%20%20%20%20setTimeout%28%22beginneon%28%29%22%2Cflashpause%29%0A%20%20%20%20%20%20%20%20%20%20return%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20function%20beginneon%28%29%7B%0A%20%20%20%20%20%20%20%20%20%20if%20%28document.all%7C%7Cdocument.getElementById%29%0A%20%20%20%20%20%20%20%20%20%20flashing%3DsetInterval%28%22neon%28%29%22%2Cflashspeed%29%7D%0A%20%20%20%20%20%20%20%20beginneon%28%29%0A%20%20%20%20%20%20%20%20%3C/script%3E%3C/span%3E%3C/h1%3E%0A%0A%20%20%20%20%20%20%20%20%3Ch5%20class%3D%22am-panel-title%20am-text-lg%22%3E%3Cspan%20style%3D%22color%3A%2366FF66%22%3E%3Cscript%20type%3D%22text/javascript%22%3Evar%20today%20%3D%20new%20Date%28%29%3Bvar%20date%20%3D%20today.getDate%28%29%3Bvar%20day%20%3D%20today.getDay%28%29%3Bvar%20month%20%3D%20today.getMonth%28%29+1%3Bvar%20year%20%3D%20today.getFullYear%28%29%3Bvar%20hour%3Dtoday.getHours%28%29%3Bvar%20morning%3D%22%22%3Bvar%20week%3D%22%22%3Bif%20%28day%3D%3D0%29%20week%3D%27%u661F%u671F%u65E5%27%3Bif%20%28day%3D%3D1%29%20week%3D%27%u661F%u671F%u4E00%27%3Bif%20%28day%3D%3D2%29%20week%3D%27%u661F%u671F%u4E8C%27%3Bif%20%28day%3D%3D3%29%20week%3D%27%u661F%u671F%u4E09%27%3Bif%20%28day%3D%3D4%29%20week%3D%27%u661F%u671F%u56DB%27%3Bif%20%28day%3D%3D5%29%20week%3D%27%u661F%u671F%u4E94%27%3Bif%20%28day%3D%3D6%29%20week%3D%27%u661F%u671F%u516D%27%3Bdocument.write%28year+%22%u5E74%22+month+%22%u6708%22+date+%22%u65E5%20%22+week+%22%20%22+morning%29%3B%3C/script%3E%3C/span%3E%3C/h5%3E%0A%0A%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%20%20%3Cnav%3E%0A%20%20%20%20%20%20%20%20%3Cul%3E%0A%20%20%20%20%20%20%20%20%3Cli%3E%3Ca%20href%3D%22%23a%22%3E%u5FEB%u6377%u641C%u7D22%3C/a%3E%3C/li%3E%0A%20%20%20%20%20%20%20%20%3Cli%3E%3Ca%20href%3D%22%23b%22%3E%u9A71%u52A8%u5929%u7A7A%3C/a%3E%3C/li%3E%0A%20%20%20%20%20%20%20%20%3Cli%3E%3Ca%20onclick%3D%22javascript%3Awindow.open%28%27http%3A//www.95105369.com/Web/Index.aspx%27%29%3B%22%3E%u5144%u5F1F%u5B98%u7F51%3C/a%3E%3C/li%3E%0A%20%20%20%20%20%20%20%20%3Cli%3E%3Ca%20onclick%3D%22javascript%3Awindow.open%28%27https%3A//newsupport.lenovo.com.cn/printeranddigital.html%3Fv%3D12b8695676abf1242ab53775db377b0d%27%29%3B%22%3E%u8054%u60F3%u5B98%u7F51%3C/a%3E%3C/li%3E%0A%20%20%20%20%20%20%20%20%3Cli%3E%3Ca%20onclick%3D%22javascript%3Awindow.open%28%27https%3A//www.jolimark.com/service/search.php%27%29%3B%22%3E%u6620%u7F8E%u5B98%u7F51%3C/a%3E%3C/li%3E%0A%20%20%20%20%20%20%20%20%3Cli%3E%3Ca%20onclick%3D%22javascript%3Awindow.open%28%27/m/1/%27%29%3B%22%3E%u67EF%u5C3C%u5361%3C/a%3E%3C/li%3E%0A%20%20%20%20%20%20%20%20%3Cmeta%20name%3D%22baidu-site-verification%22%20content%3D%22DBlFfMx0jq%22%20/%3E%0A%20%20%20%20%20%20%20%20%3C/ul%3E%0A%20%20%20%20%20%20%20%20%3C/nav%3E%0A%20%20%20%20%20%20%20%20%3C/header%3E%0A%0A%20%20%20%20%20%20%20%20%3Cfooter%20id%3D%22footer%22%3E%0A%20%20%20%20%20%20%20%20%3Cp%20class%3D%22copyright%22%3E%A92019%20%u65E0%u540D%u3006%u5C0F%u7AD9%20%3Ca%20href%3D%22https%3A//github.com/CY-SVIP%22%3EGit%3C/a%3E%3C/p%3E%0A%20%20%20%20%20%20%20%20%3C/footer%3E%0A%0A%20%20%20%20%20%20%20%20%3Cdiv%20id%3D%22main%22%3E%20%0A%20%20%20%20%20%20%20%20%3Carticle%20id%3D%22a%22%3E%0A%20%20%20%20%20%20%20%20%3Ccenter%3E%3Ch2%20class%3D%22major%22%3E%u9A71%u52A8%u641C%u7D22%3C/h2%3E%3C/center%3E%0A%20%20%20%20%20%20%20%20%3Cdiv%20id%3D%22main%22%3E%0A%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22content%22%3E%0A%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22pure-form%22%3E%20%0A%20%20%20%20%20%20%20%20%3Cselect%20id%3D%27sel%27%3E%3C/select%3E%0A%20%20%20%20%20%20%20%20%3Cbr%3E%0A%20%20%20%20%20%20%20%20%3Cp%3E%3Ccenter%3E%3Cinput%20type%3D%22text%22%20id%3D%22url%22%20onkeydown%3D%22keyDown%28event%29%22%20placeholder%3D%22%u5728%u8FD9%u91CC%u8F93%u5165%u578B%u53F7%uFF01%22%20style%3D%22border-radius%3A2px%22%3E%3C/center%3E%3C/p%3E%0A%20%20%20%20%20%20%20%20%3Cbr%3E%0A%20%20%20%20%20%20%20%20%3Cselect%20id%3D%27open%27%3E%0A%20%20%20%20%20%20%20%20%3Coption%20value%3D%270%27%3E%u65B0%u7A97%u53E3%u6253%u5F00%3C/option%3E%0A%20%20%20%20%20%20%20%20%3Coption%20value%3D%271%27%3E%u672C%u7A97%u53E3%u6253%u5F00%3C/option%3E%0A%20%20%20%20%20%20%20%20%3C/select%3E%0A%20%20%20%20%20%20%20%20%3Cp%3E%3Ccenter%3E%3Cbutton%20id%3D%22play%22%20onclick%3D%22play%28%29%3B%22%3E%u5F00%u59CB%u641C%u7D22%3C/button%3E%3C/center%3E%3C/p%3E%0A%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%20%20%3Cscript%3E%0A%20%20%20%20%20%20%20%20var%20data%20%3D%20%5B%0A%0A%20%20%20%20%20%20%20%20%7Bname%3A%22%u6253%u5370%u673A%u9A71%u52A8%u7F51%28%u7B2C%u4E09%u65B9%29%22%2Curl%3A%22http%3A//www.dyjqd.com/plus/search.php%3Fq%3D%22%7D%2C%0A%0A%20%20%20%20%20%20%20%20%7Bname%3A%22%u60E0%u666E%28%u5B98%u7F51%29%22%2Curl%3A%22https%3A//support.hp.com/cn-zh/drivers/selfservice/identify%3Fq%3D%22%7D%2C%0A%0A%20%20%20%20%20%20%20%20%7Bname%3A%22%u7231%u666E%u751F%28%u5B98%u7F51%29%22%2Curl%3A%22http%3A//www.epson.com.cn/Apps/search/index.aspx%3Fkey%3D%22%7D%2C%0A%0A%20%20%20%20%20%20%20%20%7Bname%3A%22%u9A71%u52A8%u4EBA%u751F%28%u7B2C%u4E09%u65B9%29%22%2Curl%3A%22http%3A//drivers.160.com/index.php%3Fm%3Ddrivers%26c%3Dsearchres%26a%3Dindex%26search%3D%22%7D%2C%0A%0A%20%20%20%20%20%20%20%20%7Bname%3A%22%u9A71%u52A8%u4E4B%u5BB6%28%u7B2C%u4E09%u65B9%29%22%2Curl%3A%22http%3A//so.mydrivers.com/drivers.aspx%3Ftn%3D98012088_dg%26ch%3D1%26s_class%3D1%26q%3D%22%7D%2C%0A%0A%0A%20%20%20%20%20%20%20%20%5D%3B%0A%20%20%20%20%20%20%20%20for%20%28var%20i%20in%20data%29%0A%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20var%20opt%20%3D%20document.createElement%20%28%22option%22%29%3B%0A%20%20%20%20%20%20%20%20%20%20opt.value%20%3D%20data%5Bi%5D.url%3B%0A%20%20%20%20%20%20%20%20%20%20opt.innerText%20%3D%20data%5Bi%5D.name%3B%0A%20%20%20%20%20%20%20%20%20%20document.getElementById%28%27sel%27%29.appendChild%20%28opt%29%3B%0A%20%20%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20%20%20function%20play%28%29%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20var%20url%20%3D%20document.getElementById%28%22url%22%29.value%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%7B%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20if%20%28%20document.getElementById%28%22url%22%29.value%3D%3D%22%22%29%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20alert%28%27%u8BF7%u9009%u62E9%u63A5%u53E3%u5E76%u8F93%u5165%u578B%u53F7%21%27%29%3B%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20return%20false%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20var%20api%20%3D%20document.getElementById%28%22sel%22%29.value%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20var%20open%20%3D%20document.getElementById%28%22open%22%29.value%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20url%20%3D%20api%20+%20url%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20switch%28open%29%0A%20%20%20%20%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20case%20%270%27%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20window.open%28url%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20console.log%280%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20break%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20case%20%271%27%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20window.location%20%3D%20url%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20console.log%281%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20break%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%3C/script%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%3Cscript%3E%0A%20%20%20%20%20%20%20%20%20%20function%20keyDown%28e%29%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20var%20keycode%20%3D%200%3B%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20if%28CheckBrowserIsIE%28%29%29%7B%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20keycode%20%3D%20event.keyCode%3B%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7Delse%7B%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20keycode%20%3D%20e.which%3B%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20if%20%28keycode%20%3D%3D%2013%20%29%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7B%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20var%20obtnLogin%20%3D%20document.getElementById%28%22play%22%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20obtnLogin.focus%28%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20function%20CheckBrowserIsIE%28evt%29%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20var%20result%20%3D%20false%3B%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20var%20browser%20%3D%20navigator.appName%3B%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20if%28browser%20%3D%3D%20%22Microsoft%20Internet%20Explorer%22%29%7B%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20result%20%3D%20true%3B%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20return%20result%3B%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/script%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/article%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Carticle%20id%3D%22b%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Ch2%20class%3D%22major%22%3E%u9A71%u52A8%u5929%u7A7A%3C/h2%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cp%3E%3Cform%20action%3D%22https%3A//www.drvsky.com/search.asp%22%20method%3D%22post%22%20target%3D%22_blank%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cinput%20name%3D%22k%22%20type%3D%22text%22%20style%3D%22color%3A%23999999%3B%22%20onfocus%3D%27if%28this.value%3D%3D%22%u8BF7%u8F93%u5165%u4EA7%u54C1%u578B%u53F7%22%29%7Bthis.value%3D%22%22%3B%7D%27%20value%3D%22%u8BF7%u8F93%u5165%u4EA7%u54C1%u578B%u53F7%22%20id%3D%22Keywords%22%20size%3D%2216%22%3E%3C/p%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cp%20align%3D%22right%22%3E%3Cinput%20type%3D%22submit%22%20value%3D%22%u641C%u7D22%22%20name%3D%22submit%22%20onClick%3D%22if%28this.form.Keywords.value%3D%3D%27%27%29%20%7Balert%28%27%u8BF7%u8F93%u5165%u4EA7%u54C1%u578B%u53F7%27%29%3Breturn%20false%3B%7D%22%3E%3C/p%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/article%3E%0A%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cdiv%20id%3D%22bg%22%3E%3C/div%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cscript%20src%3D%22./js/jquery.min.js%22%3E%3C/script%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cscript%20src%3D%22./js/skel.min.js%22%3E%3C/script%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cscript%20src%3D%22./js/util.js%22%3E%3C/script%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cscript%20src%3D%22./js/main.js%22%3E%3C/script%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cscript%20type%3D%22text/javascript%22%3Edocument.oncontextmenu%3Dfunction%28t%29%7Bwindow.event%26%26%28t%3Dwindow.event%29%3Btry%7Bvar%20e%3Dt.srcElement%3Breturn%22INPUT%22%3D%3De.tagName%26%26%22text%22%3D%3De.type.toLowerCase%28%29%7C%7C%22TEXTAREA%22%3D%3De.tagName%3F%210%3A%211%7Dcatch%28n%29%7Breturn%211%7D%7D%2Cdocument.onpaste%3Dfunction%28t%29%7Bwindow.event%26%26%28t%3Dwindow.event%29%3Btry%7Bvar%20e%3Dt.srcElement%3Breturn%22INPUT%22%3D%3De.tagName%26%26%22text%22%3D%3De.type.toLowerCase%28%29%7C%7C%22TEXTAREA%22%3D%3De.tagName%3F%210%3A%211%7Dcatch%28n%29%7Breturn%211%7D%7D%2Cdocument.oncopy%3Dfunction%28t%29%7Bwindow.event%26%26%28t%3Dwindow.event%29%3Btry%7Bvar%20e%3Dt.srcElement%3Breturn%22INPUT%22%3D%3De.tagName%26%26%22text%22%3D%3De.type.toLowerCase%28%29%7C%7C%22TEXTAREA%22%3D%3De.tagName%3F%210%3A%211%7Dcatch%28n%29%7Breturn%211%7D%7D%2Cdocument.oncut%3Dfunction%28t%29%7Bwindow.event%26%26%28t%3Dwindow.event%29%3Btry%7Bvar%20e%3Dt.srcElement%3Breturn%22INPUT%22%3D%3De.tagName%26%26%22text%22%3D%3De.type.toLowerCase%28%29%7C%7C%22TEXTAREA%22%3D%3De.tagName%3F%210%3A%211%7Dcatch%28n%29%7Breturn%211%7D%7D%2Cdocument.onselectstart%3Dfunction%28t%29%7Bwindow.event%26%26%28t%3Dwindow.event%29%3Btry%7Bvar%20e%3Dt.srcElement%3Breturn%22INPUT%22%3D%3De.tagName%26%26%22text%22%3D%3De.type.toLowerCase%28%29%7C%7C%22TEXTAREA%22%3D%3De.tagName%3F%210%3A%211%7Dcatch%28n%29%7Breturn%211%7D%7D%3B%3C/script%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/body%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/html%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%0A"
-function OutWord()
-{
-var NewWords;
-NewWords = unescape(Words);
-document.write(NewWords);
-} 
-OutWord();
-</SCRIPT>
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>(/≧▽≦)/~┴┴ </title>
+<meta charset="utf-8">
+<meta name="baidu-site-verification" content="b9lOcChmbf">
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+<link rel="shortcut icon" href="./favicon.ico" />
+<link rel="stylesheet" href="./css/main.css">
+<noscript>
+<link rel="stylesheet" href="./css/noscript.css"/>
+</noscript>
+</head>
+<body>
+<div id="wrapper">
+<header id="header">
+<div class="logo">
+
+<div id="musical">
+<font size="8" onClick="myFun();" id="musicImg">🚀</font>
+<audio id="music" src="https://api.uomg.com/api/rand.music?sort=热歌榜&format=mp3"></audio>
+</div>
+<script>
+var flag =true;
+function myFun() {
+    var audio = document.getElementById('music');
+    if (!flag) {
+      audio.pause();
+      document.getElementById('musicImg').src = "/img/yyk.png";
+      flag = true;
+    } else {
+      audio.play();
+      document.getElementById('musicImg').src = "/img/yyg.png";
+      flag = false;
+    }}
+  </script>
+
+  </div>
+  <div class="content">
+  <div class="inner">
+
+  <h1 class="am-panel-title am-text-lg"><span style="color:#CC00FF">
+  <script>
+  var message="聚合下载"
+  var neonbasecolor="#FFFF00"
+  var neontextcolor="#FF0000"
+  var neontextcolor2="#00FF00"
+  var flashspeed=200
+  var flashingletters=2
+  var flashingletters2=2
+  var flashpause=0 
+  var n=0
+  if (document.all||document.getElementById){
+    document.write('<font color="'+neonbasecolor+'">')
+    for (m=0;m<message.length;m++)
+    document.write('<span id="neonlight'+m+'">'+message.charAt(m)+'</span>')
+    document.write('</font>')
+  }
+else
+  document.write(message)
+  function crossref(number){
+      var crossobj=document.all? eval("document.all.neonlight"+number) : document.getElementById("neonlight"+number)
+      return crossobj
+    }
+    function neon(){
+        if (n==0){
+          for (m=0;m<message.length;m++)
+          crossref(m).style.color=neonbasecolor
+        }
+        crossref(n).style.color=neontextcolor
+        if (n>flashingletters-1) crossref(n-flashingletters).style.color=neontextcolor2 
+        if (n>(flashingletters+flashingletters2)-1) crossref(n-flashingletters-flashingletters2).style.color=neonbasecolor
+        if (n<message.length-1)
+        n++
+      else{
+          n=0
+          clearInterval(flashing)
+          setTimeout("beginneon()",flashpause)
+          return
+        }
+      }
+      function beginneon(){
+          if (document.all||document.getElementById)
+          flashing=setInterval("neon()",flashspeed)}
+        beginneon()
+        </script></span></h1>
+
+        <h5 class="am-panel-title am-text-lg"><span style="color:#66FF66"><script type="text/javascript">var today = new Date();var date = today.getDate();var day = today.getDay();var month = today.getMonth()+1;var year = today.getFullYear();var hour=today.getHours();var morning="";var week="";if (day==0) week='星期日';if (day==1) week='星期一';if (day==2) week='星期二';if (day==3) week='星期三';if (day==4) week='星期四';if (day==5) week='星期五';if (day==6) week='星期六';document.write(year+"年"+month+"月"+date+"日 "+week+" "+morning);</script></span></h5>
+
+        </div>
+        </div>
+        <nav>
+        <ul>
+        <li><a href="#a">快捷搜索</a></li>
+        <li><a href="#b">官网大全</a></li> 
+        <li><a href="#c">在线文件</a></li>
+        <li><a href="#d">ping测试</a></li>
+<!--        <li><a href="#e">测试3</a></li>-->
+        <li><a onclick="javascript:window.open('https://ddz.red/');">链接缩短</a></li>
+        
+        <meta name="baidu-site-verification" content="DBlFfMx0jq" />
+        </ul>
+        </nav>
+        </header>
+
+        <footer id="footer">
+        <p class="copyright"><script src="http://pv.sohu.com/cityjson?ie=utf-8"></script><script type="text/javascript">document.write(returnCitySN["cip"]+'-'+returnCitySN["cname"])</script></p>
+        <p class="copyright">©2022 聚合下载 <a href="https://github.com/CY-SVIP">Git</a></p>
+        </p>
+        </footer>
+
+        <div id="main"> 
+        <article id="a">
+        <center><h2 class="major">驱动搜索</h2></center>
+        <div id="main">
+        <div class="content">
+        <div class="pure-form"> 
+        <select id='sel'></select>
+        <br>
+        <p><center><input type="text" id="url" onkeydown="keyDown(event)" placeholder="在这里输入型号！" style="border-radius:2px"></center></p>
+        <br>
+        <select id='open'>
+        <option value='0'>新窗口打开</option>
+        <option value='1'>本窗口打开</option>
+        </select>
+        <p><center><button id="play" onclick="play();">开始搜索</button></center></p>
+        </div>
+        </div>
+        <script>
+        var data = [
+
+        {name:"打印机驱动网(第三方)",url:"http://www.dyjqd.com/plus/search.php?q="},
+
+        {name:"戴尔(官网)",url:"https://www.dell.com/support/search/zh-cn#q="},
+
+        {name:"爱普生(官网)",url:"http://www.epson.com.cn/Apps/search/index.aspx?key="},
+
+        {name:"腾讯软件中心",url:"https://pc.qq.com/search.html#!keyword="},
+
+        {name:"360软件宝库(选用普通下载)",url:"https://baoku.360.cn/soft/search?kw="},
+        
+        {name:"☞!第三方软件存在风险慎用!☜"},
+        
+        {name:"华军软件园(第三方)",url:"https://www.onlinedown.net/search?searchname="},
+        
+        {name:"下载之家(第三方)",url:"http://www.downza.cn/search?g=0&k="},
+        
+        {name:"系统软件园(第三方)",url:"http://zhannei.baidu.com/cse/search?s=9659708832125718661&entry=1&q="},
+        
+        {name:"绿色资源网(第三方)",url:"http://s.downcc.com/pc/?k="},
+        
+        {name:"东坡下载(第三方)",url:"http://s.uzzf.com/sousuo/pc/?k="},
+                                      
+        
+
+        ];
+        for (var i in data)
+        {
+          var opt = document.createElement ("option");
+          opt.value = data[i].url;
+          opt.innerText = data[i].name;
+          document.getElementById('sel').appendChild (opt);
+        }
+
+        function play(){
+            var url = document.getElementById("url").value;
+            { 
+              if ( document.getElementById("url").value=="") 
+              {
+                alert('请选择接口并输入型号!'); 
+                return false;
+              }
+            }
+            var api = document.getElementById("sel").value;
+            var open = document.getElementById("open").value;
+            url = api + url;
+            switch(open)
+            {
+              case '0':
+              window.open(url);
+              console.log(0);
+              break;
+              case '1':
+              window.location = url;
+              console.log(1);
+              break;
+            }
+          }
+          </script>
+
+          <script>
+          function keyDown(e){
+              var keycode = 0; 
+              if(CheckBrowserIsIE()){ 
+                keycode = event.keyCode; 
+              }else{ 
+                keycode = e.which; 
+              } 
+              if (keycode == 13 ) 
+              { 
+                var obtnLogin = document.getElementById("play");
+                obtnLogin.focus();
+              } 
+            }
+            function CheckBrowserIsIE(evt){
+                var result = false; 
+                var browser = navigator.appName; 
+                if(browser == "Microsoft Internet Explorer"){ 
+                  result = true; 
+                } 
+                return result; 
+              }
+              </script>
+              </article>
+
+              <article id="b">
+              <center>
+              <h1 class="major">☞官网大全☜<input type="button" onclick="myFunction()" value="查看目录"></h2>
+              <script>
+              function myFunction()
+              {
+              alert("①戴尔\n②联想\n③惠普\n④兄弟\n⑤夏普\n⑥华硕\n⑦爱普生\n⑧佳能\n⑨美能达\n⑩施乐\n⑪统信\n⑫震旦\n⑬得实\n⑭映美\n⑮OKI\n⑯宏碁\n⑰微星\n⑱英伟达\n⑲影驰\n⑳AOC\n㉑海康\n㉒大华\n㉓原版系统\n㉔斑马\n㉕TSC\n㉖奔图");
+              }
+              </script>                
+              <h3>①DELL-戴尔</h3>
+              <button type="button"><a href="https://www.dell.com/support/home/zh-cn?app=drivers" target="_blank"><span style="color:#FF0033">驱动下载</span></a></button>
+              <button type="button"><a href="https://www.dell.com/support/home/zh-cn?app=warranty&~ck=mn" target="_blank"><span style="color:#FF0033">保修查询</span></a></button>
+              <hr/>
+              <h3>②Lenovo-联想</h3>
+              <p><button type="button"><a href="https://newsupport.lenovo.com.cn/" target="_blank"><span style="color:#FF0033">驱动及保修</span></a></button>
+              <hr/>
+              <h3>③HP-惠普</h3>
+              <button type="button"><a href="https://support.hp.com/cn-zh/drivers" target="_blank"><span style="color:#FF0033">驱动下载</span></a></button>
+              <button type="button"><a href="https://support.hp.com/cn-zh/checkwarranty" target="_blank"><span style="color:#FF0033">保修查询</span></a></button>
+              <hr/>
+              <h3>④brother-兄弟</h3>
+              <button type="button"><a href="http://www.95105369.com/Web/Index.aspx" target="_blank"><span style="color:#FF0033">驱动下载</span></a></button>
+              <button type="button"><a href="https://www.brother.cn/project/DomesticOS/" target="_blank"><span style="color:#FF0033">国产系统驱动</span></a></button>
+              <hr/>
+              <h3>⑤SHARP-夏普</h3>
+              <button type="button"><a href="https://www.sharp.cn/node/1223" target="_blank"><span style="color:#FF0033">驱动下载{Ctrl+F搜索}</span></a></button>
+              <hr/>
+              <h3>⑥ASUS-华硕</h3>
+              <button type="button"><a href="https://www.asus.com.cn/support/Download-Center/" target="_blank"><span style="color:#FF0033">驱动下载</span></a></button>
+              <button type="button"><a href="https://www.asus.com.cn/support/Warranty-Status-inquiry" target="_blank"><span style="color:#FF0033">保修查询</span></a></button></p>
+              <hr/>
+              <h3>⑦EPSON-爱普生</h3>
+              <button type="button"><a href="https://www.epson.com.cn/Apps/tech_support/GuideDrive.aspx?columnid=384&sort-1=376&product-2=378" target="_blank"><span style="color:#FF0033">驱动下载</span></a></button>
+              <hr/>
+              <h3>⑧Canon-佳能</h3>
+              <p><button type="button"><a href="https://www.canon.com.cn/supports/download/sims/search/index" target="_blank"><span style="color:#FF0033">驱动下载</span></a></button></p>
+              <hr/>
+              <h3>⑨Konica Minolta-柯尼卡美能达</3>
+              <p></p>
+              <p><button type="button"><a href="https://www.konicaminolta.com.cn/support/drivers/index.html" target="_blank"><span style="color:#FF0033">驱动下载</span></a></button></p>
+              <hr/>
+              <h3>⑩Fuji Xerox-富士施乐</h3>
+              <p><button type="button"><a href="https://support-fb.fujifilm.com/setupSupport.do?cid=3&ctry_code=CN&lang_code=zh_CN" target="_blank"><span style="color:#FF0033">驱动下载</span></a></button></p>
+              <hr/>
+              <h3>⑪统信UOS</h3>
+              <button type="button"><a href="https://www.chinauos.com/ecology/solution" target="_blank"><span style="color:#FF0033">进入官网</span></a></button>
+              <button type="button"><a href="https://ecology.chinauos.com" target="_blank"><span style="color:#FF0033">驱动下载</span></a></button>
+              <hr/>
+              <h3>⑫AURORA-震旦</h3>
+              <p><button type="button"><a href="https://www.aurora.com.cn/oa/product/download" target="_blank"><span style="color:#FF0033">驱动下载</span></a></button></p>
+              <hr/>
+              <h3>⑬Dascom-得实</h3>
+              <p><button type="button"><a href="https://www.dascom.cn/front/web/site.down" target="_blank"><span style="color:#FF0033">驱动下载</span></a></button></p>
+              <hr/>
+              <h3>⑭JOLIMARK-映美</h3>
+              <p><form id="fromdrv" name="fromdrv" method="post" action="https://www.jolimark.com/service/search.php?m=1">
+              <input name="p" type="checkbox" id="p" value="1" checked="checked" />
+              <input name="d" type="checkbox" id="d" value="1" checked="checked" />
+              <input name="m" type="checkbox" id="m" value="1" checked="checked" />
+              <input name="n" type="checkbox" id="n" value="1" checked="checked" />
+              <input name="q" type="checkbox" id="q" value="1" checked="checked" />
+              <input name="search" type="text" id="search" size="25" maxlength="20" class="tabline" placeholder="在这里输入型号！" /></p>
+              <p align="right"><button id="down2">搜索</button></p>
+              <hr/>
+              <h3>⑮OKI-日冲</h3>
+              <p><button type="button"><a href="https://www.oki.com/cn/printing/support/index.html" target="_blank"><span style="color:#FF0033">驱动下载</span></a></button></p>
+              <h3>⑯ACER-宏碁</h3>
+              <p>
+              <button type="button"><a href="https://www.acer.com.cn/support.html?type=1" target="_blank"><span style="color:#FF0033">消费类客户</span></a></button>
+              <button type="button"><a href="https://www.acer.com.cn/support.html?type=2" target="_blank"><span style="color:#FF0033">商用大客户</span></a></button>
+              </p>
+              <p>
+              <button type="button"><a href="https://www.acer.com.cn/support.html?type=3" target="_blank"><span style="color:#FF0033">掠夺者部落</span></a></button>
+              <button type="button"><a href="https://www.acer.com.cn/support.html?type=4" target="_blank"><span style="color:#FF0033">ConceptD</span></a></button>
+              </p>
+              <hr/>
+              <h3>⑰MSI-微星</h3>
+              <p><button type="button"><a href="https://cn.msi.com/support" target="_blank"><span style="color:#FF0033">驱动下载</span></a></button></p>
+              <hr/>
+              <h3>⑱NVIDIA-英伟达</h3>
+              <p><button type="button"><a href="https://www.nvidia.cn/Download/index.aspx?lang=cn" target="_blank"><span style="color:#FF0033">驱动下载</span></a></button></p>
+              <hr/>
+              <h3>⑲GALAX-影驰</h3>
+              <p><button type="button"><a href="http://www.szgalaxy.com/__ZH_GB__/home5/service_download" target="_blank"><span style="color:#FF0033">驱动下载</span></a></button></p>
+              <hr/>
+              <h3>⑳AOC-冠捷</h3>
+              <p><button type="button"><a href="http://www.qq.com" target="_blank"><span style="color:#FF0033">服务支持</span></a></button></p>
+              <hr/>
+              <h3>㉑Hikvision-海康威视</h3>
+              <p><button type="button"><a href="https://www.hikvision.com/cn/support/Downloads/" target="_blank"><span style="color:#FF0033">下载中心</span></a></button></p>
+              <hr/>
+              <h3>㉒Dahua-大华</h3>
+              <p><button type="button"><a href="https://support.dahuatech.com/" target="_blank"><span style="color:#FF0033">服务支持</span></a></button></p>
+              <hr/>
+              <h4>㉓NEXT, ITELLYOU-原版软件，原版系统</h3>
+              <button type="button"><a href="https://msdn.itellyou.cn/" target="_blank"><span style="color:#FF0033">旧网站</span></a></button>
+              <button type="button"><a href="https://next.itellyou.cn/Original/" target="_blank"><span style="color:#FF0033">新网站</span></a></button>
+              <hr/>
+              <h3>㉔zebra-斑马</h3>
+              <p><button type="button"><a href="https://www.zebra.cn/cn/zh/support-downloads/printers.html" target="_blank"><span style="color:#FF0033">驱动下载</span></a></button></p>
+              <hr/>
+              <h3>㉕TSC</h3>
+              <p><button type="button"><a href="https://www.chinatsc.cn/zh-CN/%E8%B5%84%E6%96%99%E4%B8%8B%E8%BD%BD" target="_blank"><span style="color:#FF0033">驱动下载</span></a></button></p>
+              <hr/>
+              <h3>㉖Pantum-奔图</h3>
+              <button type="button"><a href="https://www.pantum.cn/support/download/driver/" target="_blank"><span style="color:#FF0033">驱动下载</span></a></button>
+              <button type="button"><a href="https://www.pantum.cn/support/warranty/" target="_blank"><span style="color:#FF0033">保修查询</span></a></button>
+              
+              </center>            
+              </article>
+
+              <article id="c">
+              <center>
+              <h2 class="major">在线文件</h2>
+              <script type="text/javascript">
+function qd(){
+var baidu = document.getElementById("i");
+baidu.src = "https://cysvip.lanzouw.com/b02pr1ljg";
+}
+function wj(){
+var sina = document.getElementById("i");
+sina.src = "https://cysvip.lanzouw.com/b02pr1lkh";
+}
+</script>
+<style type="text/css">
+#i{
+width:300px;
+height:400px;
+}
+</style>
+</head>
+
+<body>
+<iframe id = "i" scrolling = "no" src="https://cysvip.lanzouw.com/b02pr1ljg">
+</iframe>
+<div>
+<input type = "button" value ="驱动-密码6666" onclick = "qd()"/>
+<input type = "button" value ="工具-密码6666" onclick = "wj()"/>
+</div>
+</body>
+              <p><button type="button"><a href="https://cysvip.lanzouw.com/b02pr1ljg" target="_blank"><span style="color:#FF0033">驱动-全屏打开</span></a></button>
+              <button type="button"><a href="https://cysvip.lanzouw.com/b02pr1lkh" target="_blank"><span style="color:#FF0033">工具-全屏打开</span></a></button></p>
+              
+              
+              <button type="button"><a href="https://cysvip.lanzouw.com" target="_blank"><span style="color:#FF0033">管理登录</span></a></button>
+
+              </center>                            
+              </article>                         
+
+              <article id="d">
+              <h2 class="major">ping测试</h2>
+              <h6>通过该工具可以多个地点Ping服务器以检测服务器响应速度，如果输入域名自动会进行网站响应速度检测。</h6>
+              <input tabindex="2" class="form-control input-lg" id="sos" name="sousuo" type="text" placeholder="请输入IP或域名！" value="">
+              <input type="hidden" name="qiehuan" value="1">
+              </select>
+              <br>
+              <p align="right"><button type="button" onclick="qdw()" class="btn btn-success btn-lg btn-block" ><i class="fa">搜索</i></button></p>
+              <form>
+              <script>
+              function qdw(){
+                  var k= $('#sos').val();
+                  k=trim(k);
+                  if(!k){
+                    alert('请输入IP或域名！');
+                  }else{
+                    window.location.href="https://mping.chinaz.com/?host="+k+"";
+                  }
+                }
+                function trim(s){ 
+                    return trimRight(trimLeft(s)); 
+                  } 
+                  function trimLeft(s){ 
+                      if(s == null) { 
+                        return ""; 
+                      } 
+                      var whitespace = new String(" \t\n\r"); 
+                      var str = new String(s); 
+                      if (whitespace.indexOf(str.charAt(0)) != -1) { 
+                        var j=0, i = str.length; 
+                        while (j < i && whitespace.indexOf(str.charAt(j)) != -1){ 
+                          j++; 
+                        } 
+                        str = str.substring(j, i); 
+                      } 
+                      return str; 
+                    } 
+
+                    function trimRight(s){ 
+                        if(s == null) return ""; 
+                        var whitespace = new String(" \t\n\r"); 
+                        var str = new String(s); 
+                        if (whitespace.indexOf(str.charAt(str.length-1)) != -1){ 
+                          var i = str.length - 1; 
+                          while (i >= 0 && whitespace.indexOf(str.charAt(i)) != -1){ 
+                            i--; 
+                          } 
+                          str = str.substring(0, i+1); 
+                        } 
+                        return str; 
+                      } 
+                      function valuechange(){
+                          var qiehuan = document.getElementById('s1').value;
+                          if(qiehuan=='q'){
+                            document.getElementById('soform').action = '';
+                            document.getElementById('imgsrc').src = 'images/sologo.png';
+                          }
+                        }
+                        var a = document.getElementById('sos');
+                        var btn = document.getElementById('button');
+                        btn.onclick = function(){
+                            var reg = /^((https|http|ftp|rtsp|mms)?:\/\/)[^\s]+/;
+                            if(!reg.test(a.value)){
+                              if(!a.value){
+                                alert('不能为空！');
+                              }else{
+                              }
+                            }
+                          else{
+                              var url = '';
+                              window.location.href=url;
+                              return false;
+                            }
+                          }
+                          </script> 
+                          </article>
+                          
+<!--                          <article id="e">
+                          <h2 class="major">测试2</h2>
+                          
+                          <p><button type="button"><a href="http://www.qq.com" target="_blank"><span style="color:#FF0033">按钮1</span></a></button></p>
+                          <p><input type="button" value="按钮2" style="background-color: #FF77CB;" style="color: blueviolet" onclick="javascrtpt:window.location.href='http://www.baidu.com/'" /></p>
+                          <p><button type="button" style="background-color: #FF77CB;"><a href="http://www.qq.com" target="_blank"><span style="color:#FF0033">按钮3</span></a></button></p>
+                          
+                          </article>
+-->                          
+                          </div>
+                          </div>
+                          <div id="bg"></div>
+                          <script src="./js/jquery.min.js"></script>
+                          <script src="./js/skel.min.js"></script>
+                          <script src="./js/util.js"></script>
+                          <script src="./js/main.js"></script>                         
+                          <script>
+                   		  var settings={particles:{length:300,duration:2,velocity:30,effect:-.6,size:28}},Point=(!function(){for(var a=0,t=["ms","moz","webkit","o"],i=0;i<t.length&&!window.requestAnimationFrame;++i)window.requestAnimationFrame=window[t[i]+"RequestAnimationFrame"],window.cancelAnimationFrame=window[t[i]+"CancelAnimationFrame"]||window[t[i]+"CancelRequestAnimationFrame"];window.requestAnimationFrame||(window.requestAnimationFrame=function(t,i){var e=(new Date).getTime(),n=Math.max(0,16-(e-a)),o=window.setTimeout(function(){t(e+n)},n);return a=e+n,o}),window.cancelAnimationFrame||(window.cancelAnimationFrame=function(t){clearTimeout(t)})}(),function(){function t(t,i){this.x=void 0!==t?t:0,this.y=void 0!==i?i:0}return t.prototype.clone=function(){return new t(this.x,this.y)},t.prototype.length=function(t){return void 0===t?Math.sqrt(this.x*this.x+this.y*this.y):(this.normalize(),this.x*=t,this.y*=t,this)},t.prototype.normalize=function(){var t=this.length();return this.x/=t,this.y/=t,this},t}()),Particle=function(){function t(){this.position=new Point,this.velocity=new Point,this.acceleration=new Point,this.age=0}return t.prototype.initialize=function(t,i,e,n){this.position.x=t,this.position.y=i,this.velocity.x=e,this.velocity.y=n,this.acceleration.x=e*settings.particles.effect,this.acceleration.y=n*settings.particles.effect,this.age=0},t.prototype.update=function(t){this.position.x+=this.velocity.x*t,this.position.y+=this.velocity.y*t,this.velocity.x+=this.acceleration.x*t,this.velocity.y+=this.acceleration.y*t,this.age+=t},t.prototype.draw=function(t,i){var e=i.width*(e=this.age/settings.particles.duration,--e*e*e+1);t.globalAlpha=1-this.age/settings.particles.duration,t.drawImage(i,this.position.x-e/2,this.position.y-e/2,e,e)},t}(),ParticlePool=function(){var o,a=0,s=0,e=settings.particles.duration;function t(t){o=new Array(t);for(var i=0;i<o.length;i++)o[i]=new Particle}return t.prototype.add=function(t,i,e,n){o[s].initialize(t,i,e,n),++s==o.length&&(s=0),a==s&&a++,a==o.length&&(a=0)},t.prototype.update=function(t){var i;if(a<s)for(i=a;i<s;i++)o[i].update(t);if(s<a){for(i=a;i<o.length;i++)o[i].update(t);for(i=0;i<s;i++)o[i].update(t)}for(;o[a].age>=e&&a!=s;)++a==o.length&&(a=0)},t.prototype.draw=function(t,e){if(a<s)for(i=a;i<s;i++)o[i].draw(t,e);if(s<a){for(i=a;i<o.length;i++)o[i].draw(t,e);for(i=0;i<s;i++)o[i].draw(t,e)}},t}();!function(s){var r,c=s.getContext("2d"),h=new ParticlePool(settings.particles.length),l=settings.particles.length/settings.particles.duration;function u(t){return new Point(160*Math.pow(Math.sin(t),3),130*Math.cos(t)-50*Math.cos(2*t)-20*Math.cos(3*t)-10*Math.cos(4*t)+25)}var d=function(){var t=document.createElement("canvas"),i=t.getContext("2d");function e(t){t=u(t);return t.x=settings.particles.size/2+t.x*settings.particles.size/350,t.y=settings.particles.size/2-t.y*settings.particles.size/350,t}t.width=settings.particles.size,t.height=settings.particles.size,i.beginPath();var n=-Math.PI,o=e(n);for(i.moveTo(o.x,o.y);n<Math.PI;)o=e(n+=.01),i.lineTo(o.x,o.y);i.closePath();i.fillStyle=["#FFB6C1","#FFC0CB","#DC143C","#1E90FF","#00BFFF","#00FFFF","#00FA9A","#00FF00","#FFFF00","#8A2BE2","#A020F0","#EE1289","#7A67EE","#90EE90","#BF3EFF","#7D26CD"][Math.round(15*Math.random())],i.fill();var a=new Image;return a.src=t.toDataURL(),a}();function f(){requestAnimationFrame(f);for(var t=(new Date).getTime()/1e3,i=t-(r||t),e=(r=t,c.clearRect(0,0,s.width,s.height),l*i),n=0;n<e;n++){var o=u(Math.PI-2*Math.PI*Math.random()),a=o.clone().length(settings.particles.velocity);h.add(s.width/2+o.x,s.height/2-o.y,a.x,-a.y)}h.update(i),h.draw(c,d)}function t(){s.width=s.clientWidth,s.height=s.clientHeight}window.onresize=t,setTimeout(function(){t(),f()},10)}(document.getElementById("lovexf"));
+                       	  </script>
+                          <script src="./js/love.js"></script>                         
+                          <script type="text/javascript">document.oncontextmenu=function(t){window.event&&(t=window.event);try{var e=t.srcElement;return"INPUT"==e.tagName&&"text"==e.type.toLowerCase()||"TEXTAREA"==e.tagName?!0:!1}catch(n){return!1}},document.onpaste=function(t){window.event&&(t=window.event);try{var e=t.srcElement;return"INPUT"==e.tagName&&"text"==e.type.toLowerCase()||"TEXTAREA"==e.tagName?!0:!1}catch(n){return!1}},document.oncopy=function(t){window.event&&(t=window.event);try{var e=t.srcElement;return"INPUT"==e.tagName&&"text"==e.type.toLowerCase()||"TEXTAREA"==e.tagName?!0:!1}catch(n){return!1}},document.oncut=function(t){window.event&&(t=window.event);try{var e=t.srcElement;return"INPUT"==e.tagName&&"text"==e.type.toLowerCase()||"TEXTAREA"==e.tagName?!0:!1}catch(n){return!1}},document.onselectstart=function(t){window.event&&(t=window.event);try{var e=t.srcElement;return"INPUT"==e.tagName&&"text"==e.type.toLowerCase()||"TEXTAREA"==e.tagName?!0:!1}catch(n){return!1}};</script>
+                                    </body>
+                                    </html>
